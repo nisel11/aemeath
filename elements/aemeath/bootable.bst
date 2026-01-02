@@ -2,6 +2,7 @@ kind: stack
 
 depends:
   - aemeath/minimal.bst
+  - freedesktop-sdk.bst:vm/base-filesystem.bst
   - freedesktop-sdk.bst:components/util-linux-full.bst
   - freedesktop-sdk.bst:components/linux.bst
   - freedesktop-sdk.bst:components/linux-firmware.bst

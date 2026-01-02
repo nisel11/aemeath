@@ -77,6 +77,10 @@ config:
     C! /etc/systemd/system.conf
     C! /etc/systemd/timesyncd.conf
     C! /etc/systemd/user.conf
+    # freedesktop-sdk.bst:integration/ldconfig.bst
+    L /etc/ld.so.conf
+    # vm/mesa-default.bst
+    L /etc/ld.so.conf.d/00_mesa.conf
     EOF
 
   - |

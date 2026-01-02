@@ -30,5 +30,5 @@ config:
     sdk_version="${usr_img##usr_}"
     sdk_version="${sdk_version%.erofs}"
     sdk_version="${sdk_version%_*}"
-    cp "/signed-boot/boot/EFI/Linux/freedesktopsdk_${sdk_version}.efi" '%{install-root}/'
-    xz ${XZFLAGS} "%{install-root}/freedesktopsdk_${sdk_version}.efi"
+    cp "/signed-boot/boot/EFI/Linux/aemeath_${sdk_version}.efi" '%{install-root}/'
+    xz ${XZFLAGS} "%{install-root}/aemeath_${sdk_version}.efi"
