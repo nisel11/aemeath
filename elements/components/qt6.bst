@@ -1,7 +1,6 @@
 kind: stack
 
 depends:
-  - aemeath/platform.bst
   - components/qt6/qt3d.bst
   - components/qt6/qt5compat.bst
   - components/qt6/qtbase.bst
