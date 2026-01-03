@@ -4,9 +4,11 @@ depends:
   - components/kf6/attica.bst
   - components/kf6/breeze-icons.bst
   - components/kf6/extra-cmake-modules.bst
+  - components/kf6/frameworkintegration.bst
   - components/kf6/karchive.bst
   - components/kf6/kauth.bst
   - components/kf6/kbookmarks.bst
+  - components/kf6/kcmutils.bst
   - components/kf6/kcodecs.bst
   - components/kf6/kcolorscheme.bst
   - components/kf6/kcompletion.bst
@@ -15,21 +17,39 @@ depends:
   - components/kf6/kcoreaddons.bst
   - components/kf6/kcrash.bst
   - components/kf6/kdbusaddons.bst
+  - components/kf6/kdeclarative.bst
+  - components/kf6/kded.bst
+  - components/kf6/kdnssd.bst
   - components/kf6/kdoctools.bst
   - components/kf6/kfilemetadata.bst
   - components/kf6/kglobalaccel.bst
   - components/kf6/kguiaddons.bst
   - components/kf6/ki18n.bst
   - components/kf6/kiconthemes.bst
+  - components/kf6/kidletime.bst
   - components/kf6/kio.bst
+  - components/kf6/kirigami.bst
   - components/kf6/kitemviews.bst
+  - components/kf6/kitemmodels.bst
   - components/kf6/kjobwidgets.bst
+  - components/kf6/knewstuff.bst
   - components/kf6/knotifications.bst
+  - components/kf6/knotifyconfig.bst
   - components/kf6/kpackage.bst
+  - components/kf6/kparts.bst
+  - components/kf6/kplotting.bst
+  - components/kf6/kpty.bst
   - components/kf6/kservice.bst
+  - components/kf6/ktexteditor.bst
   - components/kf6/ktexttemplate.bst
+  - components/kf6/kunitconversion.bst
   - components/kf6/kwallet.bst
+  - components/kf6/kwayland.bst
   - components/kf6/kwidgetsaddons.bst
   - components/kf6/kwindowsystem.bst
+  - components/kf6/kxmlgui.bst
+  - components/kf6/qqc2-desktop-style.bst
   - components/kf6/solid.bst
   - components/kf6/sonnet.bst
+  - components/kf6/syntax-highlighting.bst
+  - components/kf6/threadweaver.bst

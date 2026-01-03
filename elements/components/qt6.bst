@@ -5,11 +5,14 @@ depends:
   - components/qt6/qt5compat.bst
   - components/qt6/qtbase.bst
   - components/qt6/qtcharts.bst
+  - components/qt6/qtconnectivity.bst
   - components/qt6/qtdeclarative.bst
   - components/qt6/qtgrpc.bst
   - components/qt6/qthttpserver.bst
+  - components/qt6/qtimageformats.bst
   - components/qt6/qtlanguageserver.bst
   - components/qt6/qtlocation.bst
+  - components/qt6/qtmultimedia.bst
   - components/qt6/qtnetworkauth.bst
   - components/qt6/qtpositioning.bst
   - components/qt6/qtquick3d.bst
@@ -18,11 +21,14 @@ depends:
   - components/qt6/qtquicktimeline.bst
   - components/qt6/qtremoteobjects.bst
   - components/qt6/qtscxml.bst
+  - components/qt6/qtsensors.bst
   - components/qt6/qtserialport.bst
   - components/qt6/qtsvg.bst
   - components/qt6/qtshadertools.bst
+  - components/qt6/qtspeech.bst
   - components/qt6/qttools.bst
   - components/qt6/qttranslations.bst
+  - components/qt6/qtwayland.bst
   - components/qt6/qtwebchannel.bst
   - components/qt6/qtserialport.bst
   - components/qt6/qtwebsockets.bst
