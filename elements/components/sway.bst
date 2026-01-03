@@ -2,4 +2,4 @@ kind: stack
 
 depends:
   - aemeath/platform.bst
-  - components/qt6.bst
+  - components/sway/sway.bst

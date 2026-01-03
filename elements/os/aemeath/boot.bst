@@ -5,7 +5,7 @@ build-depends:
 - filename: os/aemeath/usr-image.bst
   config:
     location: /usr-image
-- components/os-release.bst
+- components/aemeath/os-release.bst
 - freedesktop-sdk.bst:components/binutils.bst
 - freedesktop-sdk.bst:components/sbsigntools.bst
 - freedesktop-sdk.bst:components/sign-file.bst

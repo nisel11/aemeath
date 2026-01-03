@@ -81,6 +81,8 @@ config:
     L /etc/ld.so.conf
     # vm/mesa-default.bst
     L /etc/ld.so.conf.d/00_mesa.conf
+    # components/sway/sway.bst
+    L /etc/sway/config
     EOF
 
   - |
