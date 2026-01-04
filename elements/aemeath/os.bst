@@ -11,6 +11,7 @@ depends:
 # System utilities
 - freedesktop-sdk.bst:components/containers-common.bst
 - freedesktop-sdk.bst:components/podman.bst
+- freedesktop-sdk.bst:components/sudo.bst
 - components/staging/dbus-daemon-launch-helper.bst
 # System libraries
 - freedesktop-sdk.bst:vm/mesa-default.bst
@@ -20,6 +21,7 @@ depends:
 - components/gear/partitionmanager.bst
 # Configurations
 - components/aemeath/systemd-preset.bst
+- components/aemeath/settings.bst
 - freedesktop-sdk.bst:vm/base-filesystem.bst
 - freedesktop-sdk.bst:vm/config/journald.bst
 - freedesktop-sdk.bst:vm/config/resolved.bst

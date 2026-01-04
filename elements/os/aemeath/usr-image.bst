@@ -108,10 +108,24 @@ config:
     L /etc/ld.so.conf.d/00_mesa.conf
     # components/sway/sway.bst
     L /etc/sway/config
+    # freedesktop-sdk.bst:components/avahi.bst
+    L /etc/dbus-1/system.d/avahi-dbus.conf
+    L /etc/avahi/avahi-autoipd.action
+    L /etc/avahi/avahi-daemon.conf
+    L /etc/avahi/avahi-dnsconfd.action
+    L /etc/avahi/hosts
+    L /etc/avahi/services/sftp-ssh.service
+    L /etc/avahi/services/ssh.service
     # freedesktop-sdk.bst:components/flatpak.bst
     L /etc/dbus-1/system.d/org.freedesktop.Flatpak.SystemHelper.conf
     # freedesktop-sdk.bst:components/modemmanager.bst
     L /etc/dbus-1/system.d/org.freedesktop.ModemManager1.conf
+    # freedesktop-sdk.bst:components/sudo.bst
+    C /etc/sudo.conf
+    C /etc/sudo_logsrvd.conf
+    C /etc/sudoers
+    C /etc/sudoers.d
+    C /etc/sudoers.dist
     EOF
 
   - |

@@ -20,7 +20,7 @@ depends:
   - components/plasma/plasma-workspace.bst
   - components/plasma/plasma-disks.bst
   - components/plasma/bluedevil.bst
-  #- components/plasma/kde-gtk-config.bst
+  - components/plasma/kde-gtk-config.bst
   - components/plasma/kmenuedit.bst
   - components/plasma/kscreen.bst
   - components/plasma/kwallet-pam.bst
@@ -51,9 +51,11 @@ depends:
   - components/plasma/plasma-welcome.bst
   - components/plasma/ocean-sound-theme.bst
   # - components/plasma/print-manager.bst
+  # - components/plasma/krdp.bst
   - components/plasma/spectacle.bst
+  # Experimental things
   - components/plasma/plasma-login-manager.bst
-# - components/plasma/krdp.bst
+  - components/plasma/plasma-setup.bst
   # obsolete things
   # - components/plasma/wacomtablet.bst
   # - components/plasma/oxygen.bst

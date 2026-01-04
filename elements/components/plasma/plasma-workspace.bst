@@ -89,7 +89,8 @@ depends:
 
 variables:
   cmake-local: |
-    -DBUILD_TESTING=OFF
+    -DBUILD_TESTING=OFF \
+    -DWITH_X11_SESSION=OFF
 
 sources:
 - kind: tar
