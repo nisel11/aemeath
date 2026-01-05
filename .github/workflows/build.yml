@@ -58,6 +58,11 @@ jobs:
         env:
           AEMEATH_CRT: ${{secrets.BST_ARTIFACT_PUSH_CERT}}
           AEMEATH_KEY: ${{secrets.BST_ARTIFACT_PUSH_KEY}}
+      - name: Pull build artifacts
+        uses: docker://registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2:latest
+        with:
+          driver-opts: network=host
+          args: bst artifact pull
       - name: Build packages
         uses: docker://registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2:latest
         with:
