@@ -37,9 +37,13 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
-      - name: Install buildstream
+      - name: Install dependencies and BuildStream
         run: |
+          # Buildstream dependencies
           sudo apt-get install -y bubblewrap
+          # freedesktop-sdk dependencies?
+          sudo apt-get install -y lzip
+
           pip3 install 'BuildStream == 2.*'
           pip3 install \
               requests \
