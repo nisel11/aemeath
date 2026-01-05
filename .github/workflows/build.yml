@@ -61,6 +61,7 @@ jobs:
       - name: Build packages
         uses: docker://registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2:latest
         with:
+          driver-opts: network=host
           args: bst build aemeath/os.bst
       - name: Disable pushing for non-packages
         run: |
@@ -75,8 +76,10 @@ jobs:
       - name: Build images
         uses: docker://registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2:latest
         with:
+          driver-opts: network=host
           args: bst build os/aemeath/export.bst
       - name: Export images
         uses: docker://registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2:latest
         with:
+          driver-opts: network=host
           args: bst artifact checkout os/aemeath/export.bst --directory target
