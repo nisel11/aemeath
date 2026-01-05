@@ -47,7 +47,8 @@ jobs:
           pip3 install 'BuildStream == 2.*'
           pip3 install \
               requests \
-              'dulwich == 0.24.*'
+              'dulwich == 0.24.*' \
+              tomlkit
       - name: Tailscale
         uses: tailscale/github-action@v4
         with:
