@@ -29,6 +29,11 @@ jobs:
         uses: ublue-os/remove-unwanted-software@517622d6452028f266b7ba4cc9a123b5f58a6b53 # v7
         with:
           remove-docker-cached-images: false
+      - name: Cache buildstream CAS
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/buildstream
+          key: ${{ runner.os }}-bst-${{ steps.date.outputs.date }}
       - name: Tailscale
         uses: tailscale/github-action@v4
         with:
