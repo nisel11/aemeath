@@ -92,6 +92,11 @@ variables:
     -DBUILD_TESTING=OFF \
     -DWITH_X11_SESSION=OFF
 
+config:
+  install-commands:
+    (>):
+    - rm -rf '%{install-root}%{datadir}/xsessions'
+
 sources:
 - kind: tar
   url: 'kde_stable:plasma/%{plasma-version}/plasma-workspace-%{plasma-version}.tar.xz'

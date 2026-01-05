@@ -1,53 +1,12 @@
-kind: meson
-
-sources:
-- kind: git_repo
-  url: github:ximion/appstream.git
-  track: v1.0.*
-  ref: f3ccabfa4d9582b7b0baa90d79899eb93b28b10c
+kind: filter
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
-- freedesktop-sdk.bst:bootstrap/sed.bst
-- freedesktop-sdk.bst:components/docbook-xsl.bst
-- freedesktop-sdk.bst:components/gperf.bst
-- freedesktop-sdk.bst:components/itstool.bst
-- freedesktop-sdk.bst:components/python3-gi-docgen.bst
-- freedesktop-sdk.bst:components/xmlto.bst
-- components/qt6/qttools.bst
+- components/staging/appstream-base.bst
 
-depends:
-- freedesktop-sdk.bst:components/cairo.bst
-- freedesktop-sdk.bst:components/curl.bst
-- freedesktop-sdk.bst:components/fontconfig.bst
-- freedesktop-sdk.bst:components/freetype.bst
-- freedesktop-sdk.bst:components/gdk-pixbuf.bst
-- freedesktop-sdk.bst:components/glib.bst
-- freedesktop-sdk.bst:components/glib-networking.bst
-- freedesktop-sdk.bst:components/gobject-introspection.bst
-- freedesktop-sdk.bst:components/libyaml.bst
-- freedesktop-sdk.bst:components/librsvg.bst
-- freedesktop-sdk.bst:components/libxml2.bst
-- freedesktop-sdk.bst:components/libxmlb.bst
-- freedesktop-sdk.bst:components/pango.bst
-- freedesktop-sdk.bst:components/systemd-libs.bst
-- components/qt6/qtbase.bst
+runtime-depends:
+- freedesktop-sdk.bst:components/appstream.bst
 
-variables:
-  meson-local: >-
-    -Dqt=true
-    -Dstemming=false
-    -Dcompose=true
-    -Ddocs=false
-    -Dapidocs=true
-
-public:
-  bst:
-    split-rules:
-      devel:
-        (>):
-        - '%{libdir}/libappstream-compose.so'
-        - '%{libdir}/libappstream.so'
-        - '%{libdir}/libAppStreamQt.so'
-        - '%{bindir}'
-        - '%{bindir}/**'
+config:
+  include:
+  - appstream-qt
+  include-orphans: false

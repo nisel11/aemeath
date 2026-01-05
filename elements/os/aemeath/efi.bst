@@ -37,7 +37,7 @@ config:
            --uefi \
            --no-machineid --kernel-image /boot/vmlinuz \
            --kver $(ls -1 /lib/modules | head -n1) \
-           --kernel-cmdline "rw mount.usrflags=ro lockdown=confidentiality" \
+           --kernel-cmdline "rw mount.usrflags=ro lockdown=confidentiality systemd.firstboot=no" \
            --install 'fsck.ext4' \
            --install 'mkfs.ext4' \
            --libdirs %{libdir} \

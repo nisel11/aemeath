@@ -20,12 +20,13 @@ depends:
 
 variables:
   cmake-local: |
-    -DBUILD_TESTING=OFF
+    -DBUILD_TESTING=OFF \
+    -DCMAKE_BUILD_TYPE=Release
 
 sources:
 - kind: git_repo
   url: 'kde:plasma/plasma-setup.git'
   track: master
   ref: 452cd90593dbb5994afb69cf28b36805e167d226
-- kind: local
-  path: files/plasma-setup
+- kind: patch_queue
+  path: patches/plasma-setup

@@ -28,7 +28,7 @@ config:
 
   install-commands:
   - |
-    ./b2 --prefix=%{install-root}%{prefix} install threading=multi link=shared
+    ./b2 --prefix=%{install-root}%{prefix} --libdir="%{lib}" install threading=multi link=shared
 
 sources:
 - kind: tar

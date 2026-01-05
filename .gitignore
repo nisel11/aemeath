@@ -40,3 +40,7 @@ files/boot-keys/private-key/
 files/boot-keys/VENDOR.der
 current-secure-vm/
 secure-vm-repo/
+
+# aemeath cache keys
+aemeath.crt
+aemeath.key

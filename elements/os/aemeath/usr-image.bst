@@ -37,8 +37,12 @@ config:
   - |
     sed -i /pam_selinux/d /sysroot/usr/lib/pam.d/*
 
+    # Set unix_chkpwd back to setuid
   - |
-    echo "IMAGE_VERSION=%{aemeath-version}" >>/sysroot/usr/lib/os-release
+    chmod 4755 "/sysroot/usr/bin/unix_chkpwd"
+
+  - |
+    echo "IMAGE_VERSION=%{image-version}" >>/sysroot/usr/lib/os-release
 
   - |
     cat >/sysroot/usr/lib/tmpfiles.d/extra-etc.conf<<EOF
@@ -129,16 +133,16 @@ config:
     EOF
 
   - |
-    mkfs.erofs '%{install-root}/usr_%{aemeath-version}.erofs' /sysroot/usr
+    mkfs.erofs '%{install-root}/usr_%{image-version}.erofs' /sysroot/usr
   - |
-    veritysetup format --salt="%{salt}" "%{install-root}/usr_%{aemeath-version}.erofs" "%{install-root}/usr_%{aemeath-version}.verity" | sed '/^Root hash:[[:space:]]*/{;s///;q;};d' >"%{install-root}/usr-root-hash.txt"
+    veritysetup format --salt="%{salt}" "%{install-root}/usr_%{image-version}.erofs" "%{install-root}/usr_%{image-version}.verity" | sed '/^Root hash:[[:space:]]*/{;s///;q;};d' >"%{install-root}/usr-root-hash.txt"
 
   - |
     usr_part_uuid="$(cat "%{install-root}/usr-root-hash.txt" | sed -E 's/^([0-9a-f]{8})([0-9a-f]{4})([0-9a-f]{4})([0-9a-f]{4})([0-9a-f]{12}).*/\1\2\3\4\5/')"
-    mv "%{install-root}/usr_%{aemeath-version}.erofs" "%{install-root}/usr_%{aemeath-version}_${usr_part_uuid}.erofs"
-    ln -s "usr_%{aemeath-version}_${usr_part_uuid}.erofs" '%{install-root}/usr.erofs'
+    mv "%{install-root}/usr_%{image-version}.erofs" "%{install-root}/usr_%{image-version}_${usr_part_uuid}.erofs"
+    ln -s "usr_%{image-version}_${usr_part_uuid}.erofs" '%{install-root}/usr.erofs'
 
   - |
     usr_verity_part_uuid="$(cat "%{install-root}/usr-root-hash.txt" | sed -E 's/.*([0-9a-f]{8})([0-9a-f]{4})([0-9a-f]{4})([0-9a-f]{4})([0-9a-f]{12})$/\1\2\3\4\5/')"
-    mv "%{install-root}/usr_%{aemeath-version}.verity" "%{install-root}/usr_%{aemeath-version}_${usr_verity_part_uuid}.verity"
-    ln -s "usr_%{aemeath-version}_${usr_verity_part_uuid}.verity" '%{install-root}/usr.verity'
+    mv "%{install-root}/usr_%{image-version}.verity" "%{install-root}/usr_%{image-version}_${usr_verity_part_uuid}.verity"
+    ln -s "usr_%{image-version}_${usr_verity_part_uuid}.verity" '%{install-root}/usr.verity'

@@ -4,6 +4,7 @@ depends:
 - aemeath/bootable.bst
 - aemeath/platform.bst
 # System services
+- components/staging/systemd-sysupdated.bst
 - freedesktop-sdk.bst:components/networkmanager.bst
 - freedesktop-sdk.bst:components/pipewire-daemon.bst
 - freedesktop-sdk.bst:components/wireplumber.bst
@@ -17,11 +18,23 @@ depends:
 - freedesktop-sdk.bst:vm/mesa-default.bst
 # Plasma
 - components/plasma.bst
+# Built-in apps
 - components/gear/konsole.bst
+- components/gear/dolphin.bst
+- components/gear/ark.bst
 - components/gear/partitionmanager.bst
+- components/gear/audiocd-kio.bst
+- components/gear/filelight.bst
+- components/gear/kcharselect.bst
+- components/gear/kdeconnect-kde.bst
+- components/gear/kfind.bst
+#- components/gear/khelpcenter.bst # wait for Qt6WebEngine
+- components/gear/kio-admin.bst
 # Configurations
-- components/aemeath/systemd-preset.bst
+- components/aemeath/flathub-config.bst
 - components/aemeath/settings.bst
+- components/aemeath/systemd-preset.bst
+- components/aemeath/systemd-preset-all.bst
 - freedesktop-sdk.bst:vm/base-filesystem.bst
 - freedesktop-sdk.bst:vm/config/journald.bst
 - freedesktop-sdk.bst:vm/config/resolved.bst

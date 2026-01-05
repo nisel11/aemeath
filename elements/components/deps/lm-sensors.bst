@@ -12,7 +12,7 @@ build-depends:
 
 variables:
   make-args: >-
-    PREFIX="%{prefix}"  SBINDIR="%{prefix}/bin" MANDIR="%{prefix}/share/man"
+    PREFIX="%{prefix}" LIBDIR="%{prefix}/%{lib}" SBINDIR="%{prefix}/bin" MANDIR="%{prefix}/share/man"
 
 depends:
 - aemeath/minimal.bst
