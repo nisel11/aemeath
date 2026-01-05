@@ -40,7 +40,7 @@ jobs:
       - name: Install buildstream
         run: |
           sudo apt-get install -y bubblewrap
-          pip3 install 'BuildStream == 2.*'  'dulwich == 0.22.1'
+          pip3 install 'BuildStream == 2.*' buildstream-plugins buildstream-plugins-community
       - name: Tailscale
         uses: tailscale/github-action@v4
         with:
