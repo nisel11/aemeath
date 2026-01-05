@@ -22,12 +22,12 @@ build:
     cat <<EOF > include/artifacts.yml
     artifacts:
     - url: https://aemeath-cache.castorice.my.id
-    auth:
+      auth:
         client-key: aemeath.key
         client-cert: aemeath.crt
     source-caches:
     - url: https://aemeath-cache.castorice.my.id
-    auth:
+      auth:
         client-key: aemeath.key
         client-cert: aemeath.crt
     EOF
