@@ -36,7 +36,7 @@ jobs:
     runs-on: ${{ needs.create-runner.outputs.label }} # run the job on the newly created runner
 
     steps:
-      - run: dnf install podman toolbox
+      - run: dnf install -y podman toolbox
       - run: curl -fsSL https://tailscale.com/install.sh | sh
       - run: tailscale up --auth-key="${{ secrets.TS_OAUTH_SECRET }}" --advertise-tags=tag:github-actions
       - run: toolbox create -i registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2 aemeath
