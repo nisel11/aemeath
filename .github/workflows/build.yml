@@ -1,0 +1,90 @@
+---
+name: Build container image
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**/README.md"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}-${{ inputs.brand_name}}-${{ inputs.stream_name }}
+  cancel-in-progress: true
+
+jobs:
+  create-runner:
+    name: Create Hetzner Cloud runner
+    runs-on: ubuntu-latest
+    outputs:
+      label: ${{ steps.create-hcloud-runner.outputs.label }}
+      server_id: ${{ steps.create-hcloud-runner.outputs.server_id }}
+    steps:
+      - name: Create runner
+        id: create-hcloud-runner
+        uses: Cyclenerd/hcloud-github-runner@v1
+        with:
+          mode: create
+          github_token: ${{ secrets.AEMEATH_GH_PAT }}
+          hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
+          server_type: cx33
+          location: nbg1 # Nuremberg, Germany
+          image: fedora-42 # Rocky Linux 9
+  setup:
+    name: Setup Runner
+    needs: create-runner # required to start the main job when the runner is ready
+    runs-on: ${{ needs.create-runner.outputs.label }} # run the job on the newly created runner
+
+    steps:
+      - run: dnf config-manager addrepo --from-repofile https://download.docker.com/linux/fedora/docker-ce.repo
+      - run: dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+      - run: systemctl enable --now docker.service
+      - run: curl -fsSL https://tailscale.com/install.sh | sh
+      - run: tailscale up --auth-key="${{ secrets.TS_OAUTH_SECRET }}" --advertise-tags=tag:github-actions
+      - run: |
+          # create ~/bin
+          mkdir -p ~/bin
+
+          # download and extract just to ~/bin/just
+          curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/bin --tag 1.46.0
+
+          # add `~/bin` to the paths that your shell searches for executables
+          # this line should be added to your shells initialization file,
+          # e.g. `~/.bashrc` or `~/.zshrc`
+          export PATH="$PATH:$HOME/bin"
+  build:
+    name: Build Aemeath
+    needs:
+      - create-runner
+      - setup
+    runs-on: ${{ needs.create-runner.outputs.label }} # run the job on the newly created runner
+    container:
+      image: registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2
+      options: --privileged --device /dev/fuse
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+      - name: Set up environment
+        run: |
+          echo "$AEMEATH_CRT" > aemeath.crt
+          echo "$AEMEATH_KEY" > aemeath.key
+        shell: bash
+        env:
+          AEMEATH_CRT: ${{secrets.BST_ARTIFACT_PUSH_CERT}}
+          AEMEATH_KEY: ${{secrets.BST_ARTIFACT_PUSH_KEY}}
+  delete-runner:
+    name: Delete Hetzner Cloud runner
+    needs:
+      - create-runner # required to get output from the create-runner job
+      - build # required to wait when the main job is done
+    runs-on: ubuntu-latest
+    if: ${{ always() }} # required to stop the runner even if the error happened in the previous jobs
+    steps:
+      - name: Delete runner
+        uses: Cyclenerd/hcloud-github-runner@v1
+        with:
+          mode: delete
+          github_token: ${{ secrets.AEMEATH_GH_PAT }}
+          hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
+          name: ${{ needs.create-runner.outputs.label }}
+          server_id: ${{ needs.create-runner.outputs.server_id }}
