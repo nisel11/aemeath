@@ -1,14 +1,13 @@
 kind: stack
 
 depends:
-- aemeath/bootable.bst
-- aemeath/platform.bst
+- aemeath/minimal.bst
 # System services
-- components/staging/systemd-sysupdated.bst
 - freedesktop-sdk.bst:components/networkmanager.bst
 - freedesktop-sdk.bst:components/pipewire-daemon.bst
 - freedesktop-sdk.bst:components/wireplumber.bst
 - freedesktop-sdk.bst:components/flatpak.bst
+- components/staging/systemd-sysupdated.bst
 # System utilities
 - freedesktop-sdk.bst:components/containers-common.bst
 - freedesktop-sdk.bst:components/podman.bst
@@ -31,12 +30,13 @@ depends:
 #- components/gear/khelpcenter.bst # wait for Qt6WebEngine
 - components/gear/kio-admin.bst
 # Configurations
-- components/aemeath/flathub-config.bst
-- components/aemeath/settings.bst
-- components/aemeath/systemd-preset.bst
-- components/aemeath/systemd-preset-all.bst
 - freedesktop-sdk.bst:vm/base-filesystem.bst
 - freedesktop-sdk.bst:vm/config/journald.bst
 - freedesktop-sdk.bst:vm/config/resolved.bst
 - freedesktop-sdk.bst:vm/config/useradd-default.bst
 - freedesktop-sdk.bst:vm/config/systemd-homed-firstboot.bst
+- components/aemeath/os-release.bst
+- components/aemeath/flathub-config.bst
+- components/aemeath/settings.bst
+- components/aemeath/systemd-preset.bst
+- components/aemeath/systemd-preset-all.bst

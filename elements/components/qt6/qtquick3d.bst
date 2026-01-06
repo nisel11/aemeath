@@ -5,7 +5,8 @@ build-depends:
 - freedesktop-sdk.bst:components/vulkan-headers.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/zlib.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 - components/qt6/qtshadertools.bst

@@ -5,8 +5,8 @@ build-depends:
 - components/qt6/qttools.bst
 
 depends:
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
-- aemeath/platform.bst
 
 sources:
 - kind: tar

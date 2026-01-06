@@ -14,7 +14,8 @@ build-depends:
 #- components/plasma/plasma-pa.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/icu.bst
 - components/qt6/qtbase.bst
 - components/qt6/qt5compat.bst
 - components/qt6/qtdeclarative.bst

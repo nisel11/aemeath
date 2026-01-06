@@ -7,9 +7,8 @@ build-depends:
 - components/deps/python3-cairo.bst
 - components/plasma/breeze.bst
 
-
-depends:
-- aemeath/platform.bst
+runtime-depends:
+- freedesktop-sdk.bst:components/gtk3.bst
 
 variables:
   cmake-local: |

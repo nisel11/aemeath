@@ -4,9 +4,10 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 
 depends:
-- aemeath/platform.bst
-- components/qt6/qtbase.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/glib.bst
 - freedesktop-sdk.bst:components/polkit.bst
+- components/qt6/qtbase.bst
 
 variables:
   cmake-local: |

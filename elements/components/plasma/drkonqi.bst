@@ -12,7 +12,8 @@ build-depends:
 #- components/plasma/xdg-desktop-portal-kde.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/gdb.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 - components/kf6/kcmutils.bst

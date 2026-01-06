@@ -6,9 +6,6 @@ build-depends:
 - components/kf6/extra-cmake-modules.bst
 - components/qt6/qtbase.bst
 
-depends:
-- aemeath/platform.bst
-
 sources:
 - kind: git_repo
   url: 'kde:libraries/plasma-wayland-protocols.git'

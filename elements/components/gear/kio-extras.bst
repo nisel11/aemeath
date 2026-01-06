@@ -6,7 +6,11 @@ build-depends:
 - components/kf6/kdoctools.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/libproxy.bst
+- freedesktop-sdk.bst:components/libtirpc.bst
+- freedesktop-sdk.bst:components/xorg-lib-xcursor.bst
+#- components/deps/samba.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtsvg.bst
 - components/kf6/karchive.bst
@@ -22,6 +26,9 @@ depends:
 - components/kf6/solid.bst
 - components/kf6/syntax-highlighting.bst
 - components/gear/libkexiv2.bst
+#- components/gear/libmtp.bst
+- components/deps/libplist.bst
+- components/deps/libimobiledevice.bst
 - components/deps/qt6-qcoro.bst
 - components/deps/qt6-kdsoap.bst
 - components/deps/qt6-kdsoap-ws-discovery-client.bst

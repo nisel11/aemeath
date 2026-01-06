@@ -10,7 +10,10 @@ build-depends:
 #- components/deps/power-profiles-daemon.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/xorg-lib-xcb.bst
+- freedesktop-sdk.bst:components/systemd-libs.bst
+- freedesktop-sdk.bst:components/wayland.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 - components/kf6/kauth.bst

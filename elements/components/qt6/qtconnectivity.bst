@@ -4,7 +4,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - freedesktop-sdk.bst:components/bluez-libs.bst
 - freedesktop-sdk.bst:components/pcsc-lite.bst

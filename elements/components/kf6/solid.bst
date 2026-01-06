@@ -9,9 +9,10 @@ build-depends:
 - freedesktop-sdk.bst:components/flex.bst
 
 depends:
-- aemeath/platform.bst
-- components/qt6/qtbase.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/util-linux.bst
 - freedesktop-sdk.bst:components/udisks.bst
+- components/qt6/qtbase.bst
 - components/deps/upower.bst
 - components/deps/libimobiledevice.bst
 - components/deps/libplist.bst

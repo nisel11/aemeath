@@ -8,7 +8,9 @@ build-depends:
 - components/qt6/qttools.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/glib.bst
+- freedesktop-sdk.bst:components/libsecret.bst
 - components/qt6/qtbase.bst
 - components/kf6/kcolorscheme.bst
 - components/kf6/kconfig.bst

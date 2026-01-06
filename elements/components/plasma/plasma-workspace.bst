@@ -16,9 +16,29 @@ runtime-depends:
 - components/plasma/plasma-integration.bst
 - components/deps/accountsservice.bst
 - components/deps/qt6-phonon-vlc.bst
+- freedesktop-sdk.bst:components/xwayland.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/dbus.bst
+- freedesktop-sdk.bst:components/fontconfig.bst
+- freedesktop-sdk.bst:components/freetype.bst
+- freedesktop-sdk.bst:components/icu.bst
+- freedesktop-sdk.bst:components/xorg-lib-ice.bst
+- freedesktop-sdk.bst:components/xorg-lib-sm.bst
+- freedesktop-sdk.bst:components/xorg-lib-x11.bst
+- freedesktop-sdk.bst:components/xorg-lib-xau.bst
+- freedesktop-sdk.bst:components/xorg-lib-xcb.bst
+- freedesktop-sdk.bst:components/xorg-lib-xcursor.bst
+- freedesktop-sdk.bst:components/xorg-lib-xfixes.bst
+- freedesktop-sdk.bst:components/xorg-lib-xft.bst
+- freedesktop-sdk.bst:components/xorg-lib-xtst.bst
+- freedesktop-sdk.bst:components/systemd-libs.bst
+- freedesktop-sdk.bst:components/wayland.bst
+- freedesktop-sdk.bst:components/xcb-util.bst
+- freedesktop-sdk.bst:components/xcb-util-cursor.bst
+- freedesktop-sdk.bst:components/xcb-util-image.bst
+- freedesktop-sdk.bst:components/zlib.bst
 - components/qt6/qtbase.bst
 - components/qt6/qt5compat.bst
 - components/qt6/qtdeclarative.bst

@@ -18,7 +18,7 @@ depends:
 - freedesktop-sdk.bst:components/libpulse.bst
 - freedesktop-sdk.bst:components/libsamplerate.bst
 - freedesktop-sdk.bst:components/librsvg.bst
-- aemeath/minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
   conf-local: >-

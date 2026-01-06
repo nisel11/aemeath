@@ -13,4 +13,4 @@ depends:
 - freedesktop-sdk.bst:components/glib.bst
 - freedesktop-sdk.bst:components/bash-completion.bst
 - freedesktop-sdk.bst:components/libgudev.bst
-- aemeath/minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

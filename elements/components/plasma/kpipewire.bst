@@ -6,12 +6,16 @@ build-depends:
 - components/qt6/qttools.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/ffmpeg.bst
+- freedesktop-sdk.bst:components/libdrm.bst
+- freedesktop-sdk.bst:components/libepoxy.bst
+- freedesktop-sdk.bst:components/libva.bst
+- freedesktop-sdk.bst:components/pipewire.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 - components/kf6/kcoreaddons.bst
 - components/kf6/ki18n.bst
-- freedesktop-sdk.bst:components/pipewire.bst
 
 variables:
   cmake-local: |

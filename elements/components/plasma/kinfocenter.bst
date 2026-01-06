@@ -10,7 +10,12 @@ build-depends:
 #- components/plasma/systemsettings.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/libdrm.bst
+- freedesktop-sdk.bst:components/libpulse.bst
+- freedesktop-sdk.bst:components/libusb.bst
+- freedesktop-sdk.bst:extensions/vulkaninfo/vulkan-tools.bst
+- freedesktop-sdk.bst:extensions/glxinfo/mesa-demos.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 - components/kf6/kauth.bst
@@ -33,7 +38,6 @@ depends:
 - components/plasma/libplasma.bst
 - components/deps/libdisplay-info.bst
 - components/deps/lm-sensors.bst
-- freedesktop-sdk.bst:components/libpulse.bst
 
 variables:
   cmake-local: |

@@ -7,12 +7,13 @@ build-depends:
 
 runtime-depends:
 #- components/plasma/qqc2-breeze-style.bst
-#- components/plasma/xdg-desktop-portal-kde.bst
+- components/plasma/xdg-desktop-portal-kde.bst
 - components/deps/noto-fonts.bst
 - freedesktop-sdk.bst:components/noto-emoji.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/wayland.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 - components/kf6/kcolorscheme.bst

@@ -7,9 +7,9 @@ build-depends:
 - components/qt6/qttools.bst
 
 depends:
-- aemeath/platform.bst
-- components/qt6/qtbase.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/libical.bst
+- components/qt6/qtbase.bst
 
 variables:
   cmake-local: |

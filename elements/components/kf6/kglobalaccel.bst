@@ -6,7 +6,7 @@ build-depends:
 - components/qt6/qttools.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 
 variables:

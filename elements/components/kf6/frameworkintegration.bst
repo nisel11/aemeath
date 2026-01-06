@@ -6,7 +6,7 @@ build-depends:
 - components/qt6/qttools.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - components/kf6/kcolorscheme.bst
 - components/kf6/kconfig.bst
@@ -14,7 +14,7 @@ depends:
 - components/kf6/kiconthemes.bst
 - components/kf6/knewstuff.bst
 - components/kf6/knotifications.bst
-
+- components/staging/appstream-qt.bst
 variables:
   cmake-local: |
     -DBUILD_TESTING=OFF

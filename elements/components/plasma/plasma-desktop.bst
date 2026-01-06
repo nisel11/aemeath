@@ -8,13 +8,22 @@ build-depends:
 - components/deps/intltool.bst
 - freedesktop-sdk.bst:components/wayland-protocols.bst
 
-#runtime-depends:
-#- components/plasma/systemsettings.bst
-#- components/plasma/plasma-nm.bst
-#- components/plasma/plasma-pa.bst
+runtime-depends:
+- components/plasma/systemsettings.bst
+- components/plasma/plasma-nm.bst
+- components/plasma/plasma-pa.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/libxkbcommon.bst
+- freedesktop-sdk.bst:components/libwacom.bst
+- freedesktop-sdk.bst:components/xorg-lib-x11.bst
+- freedesktop-sdk.bst:components/xorg-lib-xcb.bst
+- freedesktop-sdk.bst:components/xorg-lib-xcursor.bst
+- freedesktop-sdk.bst:components/xorg-lib-xi.bst
+- freedesktop-sdk.bst:components/xorg-lib-xkbfile.bst
+- freedesktop-sdk.bst:components/xcb-util-keysyms.bst
+- freedesktop-sdk.bst:components/xdg-user-dirs.bst
 - components/qt6/qtbase.bst
 - components/qt6/qt5compat.bst
 - components/qt6/qtdeclarative.bst

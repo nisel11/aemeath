@@ -8,7 +8,7 @@ build-depends:
 - freedesktop-sdk.bst:components/vulkan-headers.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - freedesktop-sdk.bst:components/libpulse.bst
 - freedesktop-sdk.bst:components/pipewire.bst

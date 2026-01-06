@@ -7,7 +7,7 @@ build-depends:
 - filename: os/aemeath/boot.bst
   config:
     location: /boot
-- aemeath/minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/xz.bst
 
 environment:

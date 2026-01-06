@@ -8,7 +8,8 @@ build-depends:
 - freedesktop-sdk.bst:components/wayland-protocols.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/wayland.bst
 - components/qt6/qtbase.bst
 
 variables:

@@ -8,7 +8,7 @@ build-depends:
 - freedesktop-sdk.bst:components/perl.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 
 variables:

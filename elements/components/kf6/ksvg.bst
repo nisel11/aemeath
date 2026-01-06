@@ -8,7 +8,7 @@ build-depends:
 - components/kf6/kirigami.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtsvg.bst
 - components/kf6/karchive.bst

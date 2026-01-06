@@ -16,6 +16,6 @@ variables:
     -DQT_MAJOR_VERSION=6
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - components/deps/qt6-kdsoap.bst

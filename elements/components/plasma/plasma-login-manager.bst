@@ -6,7 +6,9 @@ build-depends:
 - components/deps/qt6-qcoro.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/linux-pam.bst
+- freedesktop-sdk.bst:components/xorg-lib-xau.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 - components/kf6/kauth.bst

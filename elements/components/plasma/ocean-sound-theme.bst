@@ -6,7 +6,7 @@ build-depends:
 - components/kf6/extra-cmake-modules.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
   cmake-local: |

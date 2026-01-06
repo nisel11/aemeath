@@ -15,7 +15,7 @@ build-depends:
 - freedesktop-sdk.bst:components/systemd.bst
 
 depends:
-- aemeath/minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/staging/libmbim.bst
 - components/staging/libqmi.bst
 - freedesktop-sdk.bst:components/glib.bst

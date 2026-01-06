@@ -7,7 +7,7 @@ build-depends:
 - components/qt6/qtshadertools.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 - components/qt6/qtmultimedia.bst

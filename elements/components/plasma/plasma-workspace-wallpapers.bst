@@ -5,9 +5,6 @@ build-depends:
 - components/kf6/extra-cmake-modules.bst
 - components/qt6/qttools.bst
 
-depends:
-- aemeath/platform.bst
-
 variables:
   cmake-local: |
     -DBUILD_TESTING=OFF \

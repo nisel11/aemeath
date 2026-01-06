@@ -4,11 +4,9 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - components/kf6/extra-cmake-modules.bst
 
-#runtime-depends:
-#- components/plasma/systemsettings.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 #- components/qt6/qtwebview.bst
@@ -38,6 +36,7 @@ depends:
 - components/deps/kirigami-addons.bst
 - components/staging/appstream-qt.bst
 - freedesktop-sdk.bst:components/flatpak.bst
+- freedesktop-sdk.bst:components/fwupd.bst
 
 variables:
   cmake-local: |

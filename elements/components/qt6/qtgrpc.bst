@@ -5,9 +5,10 @@ build-depends:
 - components/qt6/qtdeclarative.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - freedesktop-sdk.bst:components/grpc.bst
+- freedesktop-sdk.bst:components/protobuf.bst
 
 sources:
 - kind: tar

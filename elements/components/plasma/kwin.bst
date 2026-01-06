@@ -8,7 +8,22 @@ build-depends:
 - components/deps/plasma-wayland-protocols.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:extensions/mesa/mesa.bst
+- freedesktop-sdk.bst:components/lcms.bst
+- freedesktop-sdk.bst:components/libxkbcommon.bst
+- freedesktop-sdk.bst:components/xwayland.bst
+- freedesktop-sdk.bst:components/xorg-lib-xcb.bst
+- freedesktop-sdk.bst:components/xorg-lib-xcvt.bst
+- freedesktop-sdk.bst:components/libinput.bst
+- freedesktop-sdk.bst:components/libdrm.bst
+- freedesktop-sdk.bst:components/libepoxy.bst
+- freedesktop-sdk.bst:components/libinput.bst
+- freedesktop-sdk.bst:components/pipewire.bst
+- freedesktop-sdk.bst:components/systemd-libs.bst
+- freedesktop-sdk.bst:components/wayland.bst
+- freedesktop-sdk.bst:components/xcb-util-keysyms.bst
+- freedesktop-sdk.bst:components/xcb-util-wm.bst
 - components/qt6/qtbase.bst
 - components/qt6/qt5compat.bst
 - components/qt6/qtdeclarative.bst
@@ -49,10 +64,6 @@ depends:
 - components/plasma/libplasma.bst
 - components/deps/libcanberra.bst
 - components/deps/libdisplay-info.bst
-- freedesktop-sdk.bst:components/xwayland.bst
-- freedesktop-sdk.bst:components/xorg-lib-xcvt.bst
-- freedesktop-sdk.bst:components/libinput.bst
-- freedesktop-sdk.bst:components/pipewire.bst
 
 variables:
   cmake-local: |

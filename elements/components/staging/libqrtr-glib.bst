@@ -13,4 +13,4 @@ build-depends:
 
 depends:
 - freedesktop-sdk.bst:components/glib.bst
-- aemeath/minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

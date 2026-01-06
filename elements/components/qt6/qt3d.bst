@@ -2,10 +2,13 @@ kind: cmake
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
+- freedesktop-sdk.bst:components/shaderc.bst
+- freedesktop-sdk.bst:components/vulkan-headers.bst
+- freedesktop-sdk.bst:components/vulkan-icd-loader.bst
 - components/qt6/qtdeclarative.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtshadertools.bst
 

@@ -5,7 +5,7 @@ build-depends:
 - components/kf6/extra-cmake-modules.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - components/deps/exiv2.bst
 

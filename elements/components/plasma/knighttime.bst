@@ -7,7 +7,7 @@ build-depends:
 - components/kf6/ki18n.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtpositioning.bst
 - components/kf6/kconfig.bst

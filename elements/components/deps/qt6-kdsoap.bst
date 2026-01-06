@@ -14,5 +14,5 @@ variables:
     -DKDSoap_QT6=true
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst

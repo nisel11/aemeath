@@ -8,7 +8,7 @@ build-depends:
 - components/deps/perl-uri.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - freedesktop-sdk.bst:components/docbook-xsl.bst
 - components/kf6/karchive.bst

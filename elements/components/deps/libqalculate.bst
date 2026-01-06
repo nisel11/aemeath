@@ -11,7 +11,7 @@ build-depends:
 - components/deps/intltool.bst
 
 depends:
-- aemeath/minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/icu.bst
 - freedesktop-sdk.bst:components/gmp.bst
 - freedesktop-sdk.bst:components/mpfr.bst

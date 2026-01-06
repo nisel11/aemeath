@@ -6,7 +6,8 @@ build-depends:
 - components/kf6/kdoctools.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/icu.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtmultimedia.bst
 - components/kf6/kbookmarks.bst

@@ -7,7 +7,10 @@ build-depends:
 - components/qt6/qttools.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/libxml2.bst
+- freedesktop-sdk.bst:components/libxslt.bst
+- freedesktop-sdk.bst:components/util-linux.bst
 - components/qt6/qtbase.bst
 - components/kf6/karchive.bst
 - components/kf6/kbookmarks.bst

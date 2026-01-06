@@ -7,7 +7,11 @@ build-depends:
 - freedesktop-sdk.bst:components/wayland-protocols.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/dbus.bst
+- freedesktop-sdk.bst:components/libxkbcommon.bst
+- freedesktop-sdk.bst:components/xorg-lib-x11.bst
+- freedesktop-sdk.bst:components/xorg-lib-xtst.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtconnectivity.bst
 - components/qt6/qtdeclarative.bst

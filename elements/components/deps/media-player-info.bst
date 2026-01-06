@@ -6,7 +6,7 @@ build-depends:
 
 depends:
 - freedesktop-sdk.bst:components/systemd.bst
-- aemeath/minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 sources:
 - kind: git_repo

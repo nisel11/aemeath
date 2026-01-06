@@ -15,4 +15,4 @@ variables:
     PREFIX="%{prefix}" LIBDIR="%{prefix}/%{lib}" SBINDIR="%{prefix}/bin" MANDIR="%{prefix}/share/man"
 
 depends:
-- aemeath/minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

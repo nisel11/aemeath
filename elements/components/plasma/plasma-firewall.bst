@@ -8,7 +8,7 @@ runtime-depends:
 - freedesktop-sdk.bst:components/iproute2.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 - components/kf6/kauth.bst

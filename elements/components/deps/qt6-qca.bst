@@ -4,10 +4,12 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 
 depends:
-- aemeath/platform.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- freedesktop-sdk.bst:components/ca-certificates.bst
+- freedesktop-sdk.bst:components/nss.bst
+- freedesktop-sdk.bst:components/libgcrypt.bst
 - components/qt6/qtbase.bst
 - components/qt6/qt5compat.bst
-- freedesktop-sdk.bst:components/nss.bst
 
 variables:
   cmake-local: |

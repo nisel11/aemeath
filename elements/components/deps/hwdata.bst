@@ -10,5 +10,5 @@ variables:
     --prefix="%{prefix}"
 
 build-depends:
-- aemeath/minimal.bst
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
