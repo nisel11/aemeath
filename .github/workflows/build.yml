@@ -55,10 +55,10 @@ jobs:
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - run: |
           # create ~/bin
-          mkdir -p ~/.local/bin
+          mkdir -p /bin
 
           # download and extract just to ~/bin/just
-          curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin --tag 1.46.0
+          curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /bin --tag 1.46.0
         shell: bash
       - name: Set up environment
         run: |
