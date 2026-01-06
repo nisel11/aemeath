@@ -55,12 +55,13 @@ jobs:
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - name: Setup tools
         run: |
+          set -euox pipefail
           # Setup just
           curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/bin --tag 1.46.0
 
           # Setup 7z
           curl -L https://github.com/ip7z/7zip/releases/download/25.01/7z2501-linux-x64.tar.xz | tar xJf - 7zz
-          mv 7zz /usr/bin/
+          mv 7zz /usr/bin/7z
 
           # Setup rclone
           curl https://rclone.org/install.sh | bash
