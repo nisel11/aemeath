@@ -59,6 +59,7 @@ jobs:
 
           # download and extract just to ~/bin/just
           curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin --tag 1.46.0
+        shell: bash
       - name: Set up environment
         run: |
           echo "$AEMEATH_CRT" > aemeath.crt
@@ -69,10 +70,13 @@ jobs:
           AEMEATH_KEY: ${{secrets.BST_ARTIFACT_PUSH_KEY}}
       - name: Build components
         run: just build
+        shell: bash
       - name: Build usr and kernel images
         run: just export
+        shell: bash
       - name: Build disk images
         run: just disk-image
+        shell: bash
   delete-runner:
     name: Delete Hetzner Cloud runner
     needs:
