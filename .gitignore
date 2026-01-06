@@ -44,3 +44,7 @@ secure-vm-repo/
 # aemeath cache keys
 aemeath.crt
 aemeath.key
+
+# aemeath results
+target/
+disks/
