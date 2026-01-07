@@ -102,8 +102,16 @@ jobs:
         shell: bash
       - name: Copy artifacts to S3 bucket
         run: |
-          rclone --config /rclone.conf copy target/* fina:aemeath/sysupdate/
-          rclone --config /rclone.conf copy disks/* fina:aemeath/disks/
+          set -euox pipefail
+
+          for f in target/*
+          do
+            rclone --config /rclone.conf copy "$f" fina:aemeath/sysupdate/
+          done
+          for f in disks/*
+          do
+            rclone --config /rclone.conf copy "$f" fina:aemeath/disks/
+          done
         shell: bash
   delete-runner:
     name: Delete Hetzner Cloud runner
