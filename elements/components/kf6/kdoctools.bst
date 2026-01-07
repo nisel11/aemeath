@@ -9,8 +9,10 @@ build-depends:
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
-- components/qt6/qtbase.bst
 - freedesktop-sdk.bst:components/docbook-xsl.bst
+- freedesktop-sdk.bst:components/libxml2.bst
+- freedesktop-sdk.bst:components/libxslt.bst
+- components/qt6/qtbase.bst
 - components/kf6/karchive.bst
 
 variables:
