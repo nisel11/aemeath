@@ -11,7 +11,9 @@ build-depends:
 
 environment:
   E2FSPROGS_FAKE_TIME: '1767369576'
-
+  ZSTDFLAGS: '--rm -19'
+environment-nocache:
+- ZSTDFLAGS
 variables:
   uuidnamespace: df2427db-01ec-4c99-96b1-be3edb3cd9f6
   build-root: /genimage
@@ -73,4 +75,5 @@ config:
 
   - du -h --max-depth=3 /sysroot | grep '^[^0]' | sort -rh
   - genimage --config "%{build-root}/genimage.cfg" --rootpath /sysroot
-  - du -BM "%{install-root}/disk.img"
+  - zstd ${ZSTDFLAGS} %{install-root}/disk.img
+  - du -BM "%{install-root}/disk.img.zst"
