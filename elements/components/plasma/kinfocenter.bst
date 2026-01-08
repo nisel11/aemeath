@@ -6,16 +6,17 @@ build-depends:
 - components/kf6/kdoctools.bst
 - freedesktop-sdk.bst:components/vulkan-headers.bst
 
-#runtime-depends:
-#- components/plasma/systemsettings.bst
+runtime-depends:
+- components/plasma/systemsettings.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/libdrm.bst
 - freedesktop-sdk.bst:components/libpulse.bst
 - freedesktop-sdk.bst:components/libusb.bst
-- freedesktop-sdk.bst:extensions/vulkaninfo/vulkan-tools.bst
-- freedesktop-sdk.bst:extensions/glxinfo/mesa-demos.bst
+- freedesktop-sdk.bst:components/pciutils.bst
+- freedesktop-sdk.bst:components/iproute2.bst
+- freedesktop-sdk.bst:components/dmidecode.bst
 - components/qt6/qtbase.bst
 - components/qt6/qtdeclarative.bst
 - components/kf6/kauth.bst
@@ -36,8 +37,12 @@ depends:
 - components/plasma/layer-shell-qt.bst
 - components/plasma/libkscreen.bst
 - components/plasma/libplasma.bst
+- components/deps/vulkan-tools.bst
+- components/deps/mesa-demos.bst
+- components/deps/wayland-utils.bst
 - components/deps/libdisplay-info.bst
 - components/deps/lm-sensors.bst
+- components/deps/clinfo.bst
 
 variables:
   cmake-local: |
