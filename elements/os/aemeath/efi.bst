@@ -40,6 +40,7 @@ config:
            --kernel-cmdline "rw mount.usrflags=ro lockdown=confidentiality systemd.firstboot=no" \
            --install 'fsck.ext4' \
            --install 'mkfs.ext4' \
+           --force_drivers erofs \
            --libdirs %{libdir} \
            --libdirs %{indep-libdir} \
            --add systemd-repart \
