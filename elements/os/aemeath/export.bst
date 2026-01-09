@@ -10,6 +10,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/xz.bst
 
+environment:
   ZSTDFLAGS: '--rm -19'
 environment-nocache:
 - ZSTDFLAGS
