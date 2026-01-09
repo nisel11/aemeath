@@ -29,4 +29,4 @@ variables:
 sources:
 - kind: tar
   url: 'kde_stable:release-service/%{gear-version}/src/partitionmanager-%{gear-version}.tar.xz'
-  ref: 3ae60304f7383071348a596e7f2b0029635bf568654f576e13fbca025695a2fa
+  ref: f9eba6e124a928cfcf9ee658865082818be291053ab81d1ba6e7c089f2c596e4
