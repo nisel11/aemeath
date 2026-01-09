@@ -89,7 +89,7 @@ jobs:
           echo "$AEMEATH_KEY" > /aemeath.key
 
           mkdir -p $HOME/.config
-          cat << EOF > $HOME/.config.buildstream
+          cat << EOF > $HOME/.config/buildstream.conf
           artifacts:
             override-project-caches: false
             servers:
@@ -108,7 +108,7 @@ jobs:
         shell: bash
       - name: Disable push for building images
         run: |
-          cat << EOF > $HOME/.config.buildstream
+          cat << EOF > $HOME/.config/buildstream.conf
           artifacts:
             override-project-caches: false
             servers:
