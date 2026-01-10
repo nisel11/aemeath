@@ -33,3 +33,7 @@ Aemeath is currently built as a raw disk image.
 ```
 bst build os/aemeath/disk-image.bst
 ```
+
+## Acknowledgements
+* The [Freedesktop SDK](https://freedesktop-sdk.io) project, without which this wouldn't be possible.
+* [GNOME OS](https://os.gnome.org), where a lot of additional dependencies were imported from.
