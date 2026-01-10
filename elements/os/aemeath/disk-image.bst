@@ -74,8 +74,12 @@ config:
       outputpath = "%{install-root}"
     }
     EOF
-
-  - du -h --max-depth=3 /sysroot | grep '^[^0]' | sort -rh
-  - genimage --config "%{build-root}/genimage.cfg" --rootpath /sysroot
-  - zstd ${ZSTDFLAGS} %{install-root}/aemeath_${sdk_version}.img
-  - du -BM "%{install-root}/aemeath_${sdk_version}.img.zst"
+  - |
+    usr_img="$(readlink /usr-image/usr.erofs)"
+    sdk_version="${usr_img##usr_}"
+    sdk_version="${sdk_version%.erofs}"
+    sdk_version="${sdk_version%_*}"
+    du -h --max-depth=3 /sysroot | grep '^[^0]' | sort -rh
+    genimage --config "%{build-root}/genimage.cfg" --rootpath /sysroot
+    zstd ${ZSTDFLAGS} %{install-root}/aemeath_${sdk_version}.img
+    du -BM "%{install-root}/aemeath_${sdk_version}.img.zst"
