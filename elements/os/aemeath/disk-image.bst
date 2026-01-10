@@ -45,7 +45,7 @@ config:
         size = 500M
         temporary = true
     }
-    image disk.img {
+    image aemeath_${sdk_version}.img {
         hdimage {
             align = 1M
             partition-table-type = "gpt"
@@ -77,5 +77,5 @@ config:
 
   - du -h --max-depth=3 /sysroot | grep '^[^0]' | sort -rh
   - genimage --config "%{build-root}/genimage.cfg" --rootpath /sysroot
-  - zstd ${ZSTDFLAGS} %{install-root}/disk.img
-  - du -BM "%{install-root}/disk.img.zst"
+  - zstd ${ZSTDFLAGS} %{install-root}/aemeath_${sdk_version}.img
+  - du -BM "%{install-root}/aemeath_${sdk_version}.img.zst"
