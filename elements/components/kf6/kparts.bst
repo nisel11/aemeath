@@ -23,4 +23,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kparts.git'
   track: 'v%{kf6-version}'
-  ref: b6d92e6d570b9536350a2acc1d06d1da5e74e661
+  ref: v6.22.0-0-g67fe704d551ae546d380424a5a77f7bd2facbf29

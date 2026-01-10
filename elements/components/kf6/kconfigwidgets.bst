@@ -23,4 +23,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kconfigwidgets.git'
   track: 'v%{kf6-version}'
-  ref: ed30024a4c4ac6b2dfc02265309ce526fbfc00f0
+  ref: v6.22.0-0-ga5557ba4b8380afbf40d6c159236d21017ae665f

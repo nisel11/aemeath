@@ -15,4 +15,4 @@ sources:
 - kind: git_repo
   url: gitlab:libeigen/eigen
   track: '*.*.*'
-  ref: bc3b39870ecb690a623a3f49149a358b95c5781d
+  ref: 5.0.1-0-gbc3b39870ecb690a623a3f49149a358b95c5781d

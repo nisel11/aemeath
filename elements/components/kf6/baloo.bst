@@ -29,4 +29,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/baloo.git'
   track: 'v%{kf6-version}'
-  ref: 9e0f48e53c91f94f1ced856aef2325daf9239016
+  ref: v6.22.0-0-ge14a102aaf956030181821bfd93c11ce2981e529

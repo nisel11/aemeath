@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/modemmanager-qt.git'
   track: 'v%{kf6-version}'
-  ref: ac93e91db061478697635a04214f3e21d5b19a71
+  ref: v6.22.0-0-g3d1a780733c56e876b30da560351f7ba57f91e98

@@ -29,4 +29,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/purpose.git'
   track: 'v%{kf6-version}'
-  ref: 945583f6f55cf798735a89baefa804b707f44b57
+  ref: v6.22.0-0-gb75acaf23c2c64587590fd35e1fd7942a42196cb

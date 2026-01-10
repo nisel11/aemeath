@@ -20,4 +20,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kservice.git'
   track: 'v%{kf6-version}'
-  ref: 1d40f85f4ab8926ae17124ed37cb918931743eed
+  ref: v6.22.0-0-g67ab6fdddd531f63a72f2423196aeb0b1a0d1d54

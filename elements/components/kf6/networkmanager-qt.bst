@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/networkmanager-qt.git'
   track: 'v%{kf6-version}'
-  ref: 578ce83617c5654a22363d33cb68f29daa8cb553
+  ref: v6.22.0-0-gb3d506192606ba7e98935c43f7717d1f09002bca

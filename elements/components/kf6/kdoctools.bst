@@ -25,4 +25,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kdoctools.git'
   track: 'v%{kf6-version}'
-  ref: 5b8ccc7bb5f5e0605d8e6c112c17f793835e8de1
+  ref: v6.22.0-0-g262b458d03474e9160afa17baf7186848891b122

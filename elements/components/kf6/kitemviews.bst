@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kitemviews.git'
   track: 'v%{kf6-version}'
-  ref: 287a3edf485f914507bdaaf6680815ff561abb93
+  ref: v6.22.0-0-gf801da40d4fc1283dd736a8775e9a226fc6ef358

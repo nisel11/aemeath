@@ -22,4 +22,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kdesu.git'
   track: 'v%{kf6-version}'
-  ref: 02c02d81862511ff84093d145fc054d06a87a288
+  ref: v6.22.0-0-g95e9387d5d3e5c922a9e14b3e3e71cb8069626e6

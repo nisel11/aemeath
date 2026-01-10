@@ -5,7 +5,7 @@ sources:
   track: '*.*'
   exclude:
   - '*-dev'
-  ref: e3d79ed3f7fdc6a7fa8b374860b1c23a8f172812
+  ref: 1.38.0-0-ge3d79ed3f7fdc6a7fa8b374860b1c23a8f172812
 build-depends:
 - freedesktop-sdk.bst:components/gobject-introspection.bst
 - freedesktop-sdk.bst:components/gtk-doc.bst

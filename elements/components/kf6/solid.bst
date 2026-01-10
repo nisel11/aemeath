@@ -26,4 +26,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/solid.git'
   track: 'v%{kf6-version}'
-  ref: f444838319419ccbb181e7e12078913375317d08
+  ref: v6.22.0-0-gbee90e244b43f7a05ae6c7458e4d1c414438b5d7

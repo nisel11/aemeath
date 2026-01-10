@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/bluez-qt.git'
   track: 'v%{kf6-version}'
-  ref: 6903b203bbe919591347ce4b0368431de6385af2
+  ref: v6.22.0-0-gb6426b8ff8cb24229fd5cb2331b4338dc7a563a2

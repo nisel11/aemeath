@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/karchive.git'
   track: 'v%{kf6-version}'
-  ref: 5f258908e5d8166008c06285036ebc9ee5e1b692
+  ref: v6.22.0-0-g5108a420f807a36951804d5ee56aba2927410007

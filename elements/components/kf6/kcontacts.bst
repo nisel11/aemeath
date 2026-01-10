@@ -22,4 +22,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kcontacts.git'
   track: 'v%{kf6-version}'
-  ref: 3f65be776eac4c181a7de6123a7283c0fed01825
+  ref: v6.22.0-0-g3120b2b6010165e1a7cb84335f54c91b9aa756a6

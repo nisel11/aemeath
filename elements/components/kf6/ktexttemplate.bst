@@ -18,4 +18,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/ktexttemplate.git'
   track: 'v%{kf6-version}'
-  ref: 6462d7d021705e590927575ae8d49f67c4bb6bf8
+  ref: v6.22.0-0-gac4e4d389f2016a307f53bfd5579d29ed97eaeb8

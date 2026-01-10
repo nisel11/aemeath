@@ -37,4 +37,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/ktexteditor.git'
   track: 'v%{kf6-version}'
-  ref: e7e89ffbfdd7dd8fee5d0c6fa70f69340d90418e
+  ref: v6.22.0-0-g8d720355fb9e7a6f4ea99f883b90ea36d275e857

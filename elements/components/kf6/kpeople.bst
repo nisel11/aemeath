@@ -23,4 +23,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kpeople.git'
   track: 'v%{kf6-version}'
-  ref: f686c80a95964193988bbfd993bb4d29dafe2d83
+  ref: v6.22.0-0-gff1dfce346a3577bf29304c7df1537492ac32340

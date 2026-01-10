@@ -13,4 +13,4 @@ sources:
 - kind: git_repo
   url: github:pygobject/pycairo.git
   track: 'v*'
-  ref: f2c40870be2d5e9d15ecee339e1d5e30d82c7959
+  ref: v1.29.0-0-gf2c40870be2d5e9d15ecee339e1d5e30d82c7959

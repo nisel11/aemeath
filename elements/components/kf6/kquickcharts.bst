@@ -20,4 +20,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kquickcharts.git'
   track: 'v%{kf6-version}'
-  ref: 68dd0535535660d0f0d1a53b83b7a1519fb23da4
+  ref: v6.22.0-0-g3f685898464abe640eeb07763fb48c652bc492e1

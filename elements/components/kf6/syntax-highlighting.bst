@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/syntax-highlighting.git'
   track: 'v%{kf6-version}'
-  ref: 081b9f54cce7737e23e0b53fd864cc205f859e95
+  ref: v6.22.0-0-g877d271d053abeaebdbc295fe9316c759ee71b41

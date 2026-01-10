@@ -34,4 +34,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kwallet.git'
   track: 'v%{kf6-version}'
-  ref: 48349f0bcd8ed56bcb9049c584330ac79ce09ca1
+  ref: v6.22.0-0-gaee55db955c86fd829b4c4b7d3a8de6757b4a5c9

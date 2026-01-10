@@ -11,4 +11,4 @@ sources:
 - kind: git_repo
   url: github:cs01/pygdbmi.git
   track: 'v*'
-  ref: 52a17f1d8651e941b8551a44a03d181d605e1e56
+  ref: v0.11.0.0-0-g52a17f1d8651e941b8551a44a03d181d605e1e56

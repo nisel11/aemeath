@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: 'kde:libraries/phonon-vlc.git'
   track: 'v*'
-  ref: 5c74838294d65afb8a7fa9d14ceee4120fb7cafc
+  ref: v0.12.0-0-g5c74838294d65afb8a7fa9d14ceee4120fb7cafc

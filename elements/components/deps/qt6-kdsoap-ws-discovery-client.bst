@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: kde:libraries/kdsoap-ws-discovery-client.git
   track: 'v*'
-  ref: cc51b4fc7401c9898d42b34cdf0d7abd90f4a447
+  ref: v0.4.0-0-gcc51b4fc7401c9898d42b34cdf0d7abd90f4a447
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst

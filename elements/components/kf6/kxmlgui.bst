@@ -27,4 +27,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kxmlgui.git'
   track: 'v%{kf6-version}'
-  ref: a68c6b847f6de389ef64e002c46412592e8699cf
+  ref: v6.22.0-0-gcc8ef30b396de591ca0cc261a4776d56c2615bc1
