@@ -30,6 +30,7 @@ depends:
 #- components/gear/khelpcenter.bst # wait for Qt6WebEngine
 - components/gear/kio-admin.bst
 # Configurations
+- freedesktop-sdk.bst:components/steam-devices.bst
 - freedesktop-sdk.bst:vm/base-filesystem.bst
 - freedesktop-sdk.bst:vm/config/journald.bst
 - freedesktop-sdk.bst:vm/config/resolved.bst
