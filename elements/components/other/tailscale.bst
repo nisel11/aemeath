@@ -29,8 +29,10 @@ sources:
 - kind: git_repo
   url: github:tailscale/tailscale.git
   track: v*
-  ref: 3f9f0ed93c010eb0aae1ddf968ed2f81c4d42a5d
+  exclude:
+  - '*-pre*'
+  ref: v1.92.5-0-gb1eb1a05c38c7ea682ddbfcdbd2112304f880d9e
 - kind: tar
   url: aemeath:files/tailscale-v1.92.5-vendor.tar.xz
   directory: vendor
-  ref: dc64ab04b0ab6f1723021df2f91111005ab2ef72f94a59042b6127651ddaf4d4
+  ref: 54b8211176618e45ada642c84f402d28514bfe6ea0dc81acb8ef0f9dccde403c
