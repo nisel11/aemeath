@@ -69,6 +69,13 @@ variables:
   cmake-local: |
     -DBUILD_TESTING=OFF
 
+config:
+  install-commands:
+    (>):
+    - |
+      install -d -m 0755 "%{install-root}%{prefix}/lib/tmpfiles.d"
+      echo "f+ /usr/bin/kwin_wayland - - - - capability=cap_sys_nice=ep > "%{install-root}%{prefix}/lib/tmpfiles.d/kwin.conf"
+
 sources:
 - kind: tar
   url: 'kde_stable:plasma/%{plasma-version}/kwin-%{plasma-version}.tar.xz'
