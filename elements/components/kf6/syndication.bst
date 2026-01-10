@@ -18,4 +18,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/syndication.git'
   track: 'v%{kf6-version}'
-  ref: 1090a6608f41b2ae456822495b3de2cb32c34aec
+  ref: v6.22.0-0-g6d026ee0d162bf6ff16f621611dea1114a848651

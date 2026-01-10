@@ -39,4 +39,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kio.git'
   track: 'v%{kf6-version}'
-  ref: f6a5914bf1ad7e2535d095addc91dd7b85e80d53
+  ref: v6.22.0-0-g1f471941c4be1de739322ed302266aea85de68c7

@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kcolorscheme.git'
   track: 'v%{kf6-version}'
-  ref: 0ac0e27e9eee0f9acbae1446e049154bfa4a10f8
+  ref: v6.22.0-0-g7972879c36f6ce07cfdda04b01d258185f6d044b

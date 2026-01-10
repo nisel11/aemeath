@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kpty.git'
   track: 'v%{kf6-version}'
-  ref: 089fa7172b7b572f212ef7ed73c192bf81e920e7
+  ref: v6.22.0-0-g9b9bb2ea528b39aeafc7fdd51aadc500370696da

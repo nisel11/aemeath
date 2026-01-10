@@ -20,4 +20,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kirigami.git'
   track: 'v%{kf6-version}'
-  ref: e6565d7cb961c61df6dd79707d2b6a4972e952e0
+  ref: v6.22.0-0-ga5fbb933b96333dcfe9bfcc2deea3fd5b0396c8b

@@ -25,4 +25,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/ksvg.git'
   track: 'v%{kf6-version}'
-  ref: dc895142d1bc66e6331cb3fc19c21b09784781c1
+  ref: v6.22.0-0-gc17130897693ca23aace871ae14020979c39ca61

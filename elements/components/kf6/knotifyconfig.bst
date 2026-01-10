@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/knotifyconfig.git'
   track: 'v%{kf6-version}'
-  ref: 808782a8cbdec00e368cb0fef845b6cd25ccc983
+  ref: v6.22.0-0-g8f322639919f565da251b45d338181a8239d9574

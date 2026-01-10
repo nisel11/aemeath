@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kglobalaccel.git'
   track: 'v%{kf6-version}'
-  ref: 6ddecb1a21e8848d616b6cca134679504623d4d3
+  ref: v6.22.0-0-g034e5f9695f26ad8d11b010c432ebdc30cd01ca5

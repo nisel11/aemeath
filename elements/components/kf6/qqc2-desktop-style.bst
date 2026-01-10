@@ -23,4 +23,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/qqc2-desktop-style.git'
   track: 'v%{kf6-version}'
-  ref: e770ffdad86e01206e7d94e38bfe1c66f909d65b
+  ref: v6.22.0-0-g682b73b377be3f3ce98a2e9f1c1578e9dcb3d0f0

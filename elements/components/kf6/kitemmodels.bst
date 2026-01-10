@@ -18,4 +18,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kitemmodels.git'
   track: 'v%{kf6-version}'
-  ref: ec937a345bf1353f603b183e0b39f0ff4c0ef64f
+  ref: v6.22.0-0-g9ddc111ef4a5a546870547071f96c0a64dd89cba

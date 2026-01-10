@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/ki18n.git'
   track: 'v%{kf6-version}'
-  ref: 5ffe1252ec1d4b6947d34da5fbbcceb9fd6076e3
+  ref: v6.22.0-0-g7d0575cca49cda0d4acfc1dfd64eb3995b5e4fb2

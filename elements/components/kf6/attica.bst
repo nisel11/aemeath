@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/attica.git'
   track: 'v%{kf6-version}'
-  ref: e0ca69d9f6dfa59efa1b6831c74b8932d5c7c91b
+  ref: v6.22.0-0-gf6343034c9a77dee0289d9715a3fe80f8c5c558b

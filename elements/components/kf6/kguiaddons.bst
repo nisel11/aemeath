@@ -23,4 +23,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kguiaddons.git'
   track: 'v%{kf6-version}'
-  ref: e1421c5bde412724e3074b4b42b93332a0208f2c
+  ref: v6.22.0-0-g17265ad3d8ba51d2801f477f583f0539cf4fc029

@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kcalendarcore.git'
   track: 'v%{kf6-version}'
-  ref: 6ddf4710c724c773f2515a63b9f86831999af35c
+  ref: v6.22.0-0-g6243a4af53a9a10712352535df4ae55828bc6ddd

@@ -28,4 +28,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/knewstuff.git'
   track: 'v%{kf6-version}'
-  ref: 9079fe3cfad2f9c1a8e2fc0ed6b241c23a7901db
+  ref: v6.22.0-0-g33148b0c020d38712427d6882eff3d1c8a614393

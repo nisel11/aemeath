@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kdbusaddons.git'
   track: 'v%{kf6-version}'
-  ref: e6dd9fae641232d26d210a893383e0d40d63f674
+  ref: v6.22.0-0-g367293ddf33df44e717af2f4e69a76241da3fa9a

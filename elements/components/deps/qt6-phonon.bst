@@ -20,4 +20,4 @@ sources:
 - kind: git_repo
   url: 'kde:libraries/phonon.git'
   track: 'v*'
-  ref: fcf587a6a59ea4d54104635c903c1999751ee923
+  ref: v4.12.0-0-gfcf587a6a59ea4d54104635c903c1999751ee923

@@ -20,4 +20,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kdav.git'
   track: 'v%{kf6-version}'
-  ref: 0784b76b76f3c4c0f719ede3c0f05f3c233eacfd
+  ref: v6.22.0-0-g3c58c8197f3cbeb0eccba9bdf57062dd34ee0b87

@@ -20,4 +20,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kcoreaddons.git'
   track: 'v%{kf6-version}'
-  ref: 7ccfc80a639db3b0c43114c7f16e3b03f709ac33
+  ref: v6.22.0-0-gaf34a53c79e4aa568b7ba1516d9517a33f8e7915

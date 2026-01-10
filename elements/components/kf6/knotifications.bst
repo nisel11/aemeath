@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/knotifications.git'
   track: 'v%{kf6-version}'
-  ref: f32f5ec982a2c38193977e4fd38f6cbd25ee8789
+  ref: v6.22.0-0-ga335d7880124bc21a4b9d8a9367fd1a93f8ea0f8

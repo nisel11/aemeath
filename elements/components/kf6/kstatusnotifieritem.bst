@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kstatusnotifieritem.git'
   track: 'v%{kf6-version}'
-  ref: 141656a3a2e6a2dca5ae9a9411937d1bc8cfa01c
+  ref: v6.22.0-0-g6b5a8512ddb04d219c784abb01b0febc8a21891a

@@ -23,4 +23,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/ktextwidgets.git'
   track: 'v%{kf6-version}'
-  ref: df02e2ee54e26f53cd9c4f4f9d719c0f426b580f
+  ref: v6.22.0-0-gcadbcf79438e217ff045a15ee9c5573437c4892c

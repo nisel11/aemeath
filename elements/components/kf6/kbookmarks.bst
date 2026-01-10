@@ -20,4 +20,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kbookmarks.git'
   track: 'v%{kf6-version}'
-  ref: ba258fff56ab625bcb23262143e9f316dbdda3e9
+  ref: v6.22.0-0-g99622f70fd3d1d1e8c7b159b74f61437de3be337

@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: 'kde:frameworks/kunitconversion.git'
   track: 'v%{kf6-version}'
-  ref: 5b8aaa8e2fae53489ce873680cf19ba06d4138b1
+  ref: v6.22.0-0-gbcb5524d458e7a7303d3bf7fcb81d77f706df47a

@@ -12,4 +12,4 @@ sources:
 - kind: git_repo
   url: freedesktop:media-player-info/media-player-info.git
   track: 26
-  ref: 98e3a24d9be7699c750f435ae9c5d24f7041c7b5
+  ref: 26-0-g98e3a24d9be7699c750f435ae9c5d24f7041c7b5
