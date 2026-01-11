@@ -199,7 +199,7 @@ jobs:
           echo "$AEMEATH_CRT" > aemeath.crt
           echo "$AEMEATH_KEY" > aemeath.key
 
-          sudo apt install bubblewrap
+          sudo apt install bubblewrap lzip
 
           # Setup just
           curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin --tag 1.46.0
