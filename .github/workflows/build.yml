@@ -19,6 +19,8 @@ jobs:
     outputs:
       need_rebuild: ${{ steps.changes.outputs.components }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
       - uses: dorny/paths-filter@v3
         id: changes
         with:
