@@ -31,9 +31,6 @@ jobs:
         uses: ublue-os/remove-unwanted-software@517622d6452028f266b7ba4cc9a123b5f58a6b53 # v7
         with:
           remove-docker-cached-images: false
-      - name: Install buildstream
-        run: |
-          pip3 install --user 'BuildStream == 2.*' 'dulwich == 0.22.1' requests tomlkit
       - name: Setup tools
         run: |
           set -euox pipefail
@@ -42,11 +39,6 @@ jobs:
           echo "$AEMEATH_KEY" > aemeath.key
 
           sudo apt install -y bubblewrap lzip
-
-          # Bubblewrap permissions
-          sudo apt install -y apparmor-profiles
-          sudo ln -s /usr/share/apparmor/extra-profiles/bwrap-userns-restrict /etc/apparmor.d/
-          sudo systemctl reload apparmor
 
           # Setup just
           curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/bin --tag 1.46.0
@@ -95,7 +87,10 @@ jobs:
               client-cert: aemeath.crt
           EOF
       - name: Build components
-        run: just build
+        uses: docker://registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2
+        with:
+          options: --privileged --device /dev/fuse
+        run: bst build aemeath/desktop.bst
       - name: Disable push for building images
         run: |
           cat << EOF > include/artifacts.yml
@@ -106,11 +101,15 @@ jobs:
               client-cert: aemeath.crt
           EOF
         shell: bash
-      - name: Build usr and kernel images
-        run: just export
-        shell: bash
-      - name: Build disk images
-        run: just disk-image
+      - name: Build release artifacts
+        uses: docker://registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2
+        with:
+          options: --privileged --device /dev/fuse
+        run: |
+          bst build os/aemeath/export.bst
+          bst artifact checkout os/aemeath/export.bst --directory target
+          bst build os/aemeath/disk-image.bst
+          bst artifact checkout os/aemeath/disk-image.bst --directory disks
         shell: bash
       - name: Copy artifacts to S3 bucket
         run: |
