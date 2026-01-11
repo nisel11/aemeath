@@ -21,6 +21,7 @@ depends:
 - components/plasma.bst
 # Built-in apps
 - components/gear/konsole.bst
+- components/gear/kwrite.bst
 - components/gear/dolphin.bst
 - components/gear/ark.bst
 - components/gear/partitionmanager.bst
