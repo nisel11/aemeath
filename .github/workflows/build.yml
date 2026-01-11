@@ -90,6 +90,7 @@ jobs:
       - name: Build components
         run: |
           docker run --rm \
+          --network host \
           --workdir /work \
           -v "$HOME/.config:$HOME/.config" \
           -v "${{ github.workspace }}:/work" \
@@ -111,6 +112,7 @@ jobs:
       - name: Build release artifacts
         run: |
           docker run --rm \
+          --network host \
           --workdir /work \
           -v "$HOME/.config:$HOME/.config" \
           -v "${{ github.workspace }}:/work" \
