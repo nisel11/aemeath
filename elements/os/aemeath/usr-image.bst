@@ -130,6 +130,8 @@ config:
     C /etc/sudoers
     C /etc/sudoers.d
     C /etc/sudoers.dist
+    # freedesktop-sdk.bst:components/fwupd.bst
+    C /etc/fwupd
     EOF
 
   - |

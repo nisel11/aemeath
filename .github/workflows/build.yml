@@ -13,8 +13,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  check-changes:
+    name: Check changes
+    runs-on: ubuntu-latest
+    outputs:
+      need_rebuild: ${{ steps.changes.outputs.components }}
+    steps:
+      - uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            components:
+              - 'elements/components/**'
   create-runner:
     name: Create Hetzner Cloud runner
+    needs: check-changes
+    if: ${{ needs.check-changes.outputs.need_rebuild == 'true' }}
     runs-on: ubuntu-latest
     outputs:
       label: ${{ steps.create-hcloud-runner.outputs.label }}
@@ -33,6 +47,7 @@ jobs:
   setup:
     name: Setup Runner
     needs: create-runner # required to start the main job when the runner is ready
+    if: ${{ needs.check-changes.outputs.need_rebuild == 'true' }}
     runs-on: ${{ needs.create-runner.outputs.label }} # run the job on the newly created runner
 
     steps:
@@ -43,6 +58,7 @@ jobs:
       - run: tailscale up --auth-key="${{ secrets.TS_OAUTH_SECRET }}" --advertise-tags=tag:github-actions
   build:
     name: Build Aemeath
+    if: ${{ needs.check-changes.outputs.need_rebuild == 'true' }}
     needs:
       - create-runner
       - setup
@@ -138,7 +154,7 @@ jobs:
       - create-runner # required to get output from the create-runner job
       - build # required to wait when the main job is done
     runs-on: ubuntu-latest
-    if: ${{ always() }} # required to stop the runner even if the error happened in the previous jobs
+    if: ${{ needs.check-changes.outputs.need_rebuild == 'true' && always() }}
     steps:
       - name: Delete runner
         uses: Cyclenerd/hcloud-github-runner@v1
@@ -148,3 +164,80 @@ jobs:
           hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
           name: ${{ needs.create-runner.outputs.label }}
           server_id: ${{ needs.create-runner.outputs.server_id }}
+  deploy:
+    needs:
+      - build
+    name: Build disk image
+    if: |
+      always() &&
+      (needs.build.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+      # This is optional, but if you see that your builds are way too big for the runners, you can enable this by uncommenting the following lines:
+      - name: Maximize build space
+        uses: ublue-os/remove-unwanted-software@517622d6452028f266b7ba4cc9a123b5f58a6b53 # v7
+        with:
+          remove-docker-cached-images: false
+      - name: Setup tools
+        run: |
+          set -euox pipefail
+
+          echo "$AEMEATH_CRT" > /aemeath.crt
+          echo "$AEMEATH_KEY" > /aemeath.key
+
+          # Setup just
+          curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/bin --tag 1.46.0
+
+          # Setup rclone
+          curl https://rclone.org/install.sh | bash
+
+          cat << EOF > /rclone.conf
+          [fina]
+          type = s3
+          provider = Other
+          env_auth = false
+          access_key_id = $S3_ACCESS_KEY_ID
+          secret_access_key = $S3_SECRET_ACCESS_KEY
+          region = fina
+          endpoint = s3.castorice.my.id
+          force_path_style = true
+          acl = public-read
+          bucket_acl = public-read
+          EOF
+        shell: bash
+        env:
+          AEMEATH_CRT: ${{secrets.BST_ARTIFACT_PUSH_CERT}}
+          AEMEATH_KEY: ${{secrets.BST_ARTIFACT_PUSH_KEY}}
+          S3_ACCESS_KEY_ID: ${{secrets.S3_ACCESS_KEY_ID}}
+          S3_SECRET_ACCESS_KEY: ${{secrets.S3_SECRET_ACCESS_KEY}}
+      - name: Disable push for building images
+        run: |
+          cat << EOF > include/artifacts.yml
+          artifacts:
+          - url: https://aemeath-cache.castorice.my.id
+            auth:
+              client-key: /aemeath.key
+              client-cert: /aemeath.crt
+          EOF
+        shell: bash
+      - name: Build usr and kernel images
+        run: just export
+        shell: bash
+      - name: Build disk images
+        run: just disk-image
+        shell: bash
+      - name: Copy artifacts to S3 bucket
+        run: |
+          set -euox pipefail
+
+          for f in target/*
+          do
+            rclone --config /rclone.conf copy "$f" fina:aemeath/sysupdate/
+          done
+          for f in disks/*
+          do
+            rclone --config /rclone.conf copy "$f" fina:aemeath/images/
+          done
+        shell: bash
