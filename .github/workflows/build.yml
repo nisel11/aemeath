@@ -186,8 +186,8 @@ jobs:
         run: |
           set -euox pipefail
 
-          echo "$AEMEATH_CRT" > /aemeath.crt
-          echo "$AEMEATH_KEY" > /aemeath.key
+          echo "$AEMEATH_CRT" > aemeath.crt
+          echo "$AEMEATH_KEY" > aemeath.key
 
           # Setup just
           curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/bin --tag 1.46.0
@@ -195,7 +195,7 @@ jobs:
           # Setup rclone
           curl https://rclone.org/install.sh | bash
 
-          cat << EOF > /rclone.conf
+          cat << EOF > rclone.conf
           [fina]
           type = s3
           provider = Other
@@ -220,8 +220,8 @@ jobs:
           artifacts:
           - url: https://aemeath-cache.castorice.my.id
             auth:
-              client-key: /aemeath.key
-              client-cert: /aemeath.crt
+              client-key: aemeath.key
+              client-cert: aemeath.crt
           EOF
         shell: bash
       - name: Build usr and kernel images
@@ -236,10 +236,10 @@ jobs:
 
           for f in target/*
           do
-            rclone --config /rclone.conf copy "$f" fina:aemeath/sysupdate/
+            rclone --config rclone.conf copy "$f" fina:aemeath/sysupdate/
           done
           for f in disks/*
           do
-            rclone --config /rclone.conf copy "$f" fina:aemeath/images/
+            rclone --config rclone.conf copy "$f" fina:aemeath/images/
           done
         shell: bash
