@@ -33,3 +33,6 @@ config:
     sdk_version="${sdk_version%_*}"
     cp "/boot/boot/EFI/Linux/aemeath_${sdk_version}.efi" '%{install-root}/'
     zstd ${ZSTDFLAGS} "%{install-root}/aemeath_${sdk_version}.efi"
+  - |
+    cd '%{install-root}/'
+    sha256sum *.zst > SHA256SUMS
