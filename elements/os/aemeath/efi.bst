@@ -37,7 +37,7 @@ config:
            --uefi \
            --no-machineid --kernel-image /boot/vmlinuz \
            --kver $(ls -1 /lib/modules | head -n1) \
-           --kernel-cmdline "rw mount.usrflags=ro lockdown=confidentiality systemd.firstboot=no" \
+           --kernel-cmdline "rw quiet splash mount.usrflags=ro lockdown=confidentiality systemd.firstboot=no" \
            --install 'fsck.btrfs' \
            --install 'mkfs.btrfs' \
            --add-drivers erofs \

@@ -2,6 +2,7 @@ kind: stack
 
 depends:
 - os/aemeath/deps.bst
+- freedesktop-sdk.bst:components/plymouth.bst
 - freedesktop-sdk.bst:components/fakecap.bst
 - freedesktop-sdk.bst:components/binutils.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
