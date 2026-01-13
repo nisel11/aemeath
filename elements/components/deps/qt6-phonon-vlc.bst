@@ -9,7 +9,7 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/qt6/qtbase.bst
 - components/deps/qt6-phonon.bst
-- components/deps/vlc.bst
+- components/deps/vlc-libs.bst
 - freedesktop-sdk.bst:components/libpulse.bst
 
 variables:

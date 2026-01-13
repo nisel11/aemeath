@@ -1,9 +1,10 @@
-kind: autotools
+kind: filter
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
+- components/deps/vlc-base.bst
 
-depends:
+runtime-depends:
+- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/alsa-lib.bst
 - freedesktop-sdk.bst:components/ffmpeg.bst
 - freedesktop-sdk.bst:components/libgcrypt.bst
@@ -18,13 +19,9 @@ depends:
 - freedesktop-sdk.bst:components/libpulse.bst
 - freedesktop-sdk.bst:components/libsamplerate.bst
 - freedesktop-sdk.bst:components/librsvg.bst
-- freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
-variables:
-  conf-local: >-
-    BUILDCC="/usr/bin/gcc -std=gnu99"
-
-sources:
-- kind: tar
-  url: https://download.videolan.org/vlc/3.0.23/vlc-3.0.23.tar.xz
-  ref: e891cae6aa3ccda69bf94173d5105cbc55c7a7d9b1d21b9b21666e69eff3e7e0
+config:
+  include:
+  - libvlc
+  - vlc-plugins-base
+  include-orphans: false
