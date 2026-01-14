@@ -17,6 +17,7 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/libxkbcommon.bst
 - freedesktop-sdk.bst:components/libwacom.bst
+- freedesktop-sdk.bst:components/sdl3.bst
 - freedesktop-sdk.bst:components/sdl2-compat.bst
 - freedesktop-sdk.bst:components/xorg-lib-x11.bst
 - freedesktop-sdk.bst:components/xorg-lib-xcb.bst
