@@ -2,8 +2,8 @@
 name: Build container image
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "*"
     paths-ignore:
       - "**/README.md"
   workflow_dispatch:
@@ -96,6 +96,8 @@ jobs:
               client-key: /aemeath.key
               client-cert: /aemeath.crt
           EOF
+
+          echo "image-version: ${{  github.ref_name }}" > include/image-version.yml
         shell: bash
         env:
           AEMEATH_CRT: ${{secrets.BST_ARTIFACT_PUSH_CERT}}
