@@ -42,7 +42,7 @@ config:
             extraargs = "--invariant -F32 -i${id_efi} -n EFI"
         }
         mountpoint = "/boot"
-        size = 500M
+        size = 2048M
         temporary = true
     }
     image aemeath_${sdk_version}.img {
@@ -60,13 +60,13 @@ config:
             image = "/usr-image/usr.erofs"
             partition-type-uuid = "%{usr-uuid}"
             partition-uuid = "${usr_part_uuid}"
-            size = 8G
+            size = 10G
         }
         partition fdsdk_usr_verity_${sdk_version} {
             partition-type-uuid = "%{usr-verity-uuid}"
             partition-uuid = "${usr_verity_part_uuid}"
             image = "/usr-image/usr.verity"
-            size = 50M
+            size = 200M
         }
     }
     config {
