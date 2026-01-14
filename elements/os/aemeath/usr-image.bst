@@ -41,6 +41,10 @@ config:
   - |
     chmod 4755 "/sysroot/usr/bin/unix_chkpwd"
 
+    # Set cap_sys_nice capability to kwin_wayland
+  - |
+    setcap cap_sys_nice+ep /sysroot/usr/bin/kwin_wayland
+
   - |
     echo "IMAGE_VERSION=%{image-version}" >>/sysroot/usr/lib/os-release
 

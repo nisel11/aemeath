@@ -2,7 +2,9 @@ kind: cmake
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
+- freedesktop-sdk.bst:components/vulkan-headers.bst
 - components/kf6/extra-cmake-modules.bst
+- components/kf6/kdoctools.bst
 - components/deps/qt6-qcoro.bst
 - components/deps/plasma-wayland-protocols.bst
 
@@ -12,7 +14,7 @@ runtime-depends:
 - components/plasma/kde-cli-tools.bst
 - components/plasma/ocean-sound-theme.bst
 - components/plasma/plasma-workspace-wallpapers.bst
-#- components/gear/kio-extras.bst
+- components/gear/kio-extras.bst
 - components/plasma/plasma-integration.bst
 - components/deps/accountsservice.bst
 - components/deps/qt6-phonon-vlc.bst
@@ -89,6 +91,7 @@ depends:
 - components/kf6/prison.bst
 - components/kf6/solid.bst
 - components/kf6/networkmanager-qt.bst
+- components/kf6/baloo.bst
 - components/plasma/knighttime.bst
 - components/plasma/kpipewire.bst
 - components/plasma/kscreenlocker.bst
