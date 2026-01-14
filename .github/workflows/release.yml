@@ -3,6 +3,9 @@ name: Create release
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   create-release:
     name: Create release tag
@@ -25,6 +28,8 @@ jobs:
           if [[ "$previous_date" == "$current_date" ]]; then
             current_rev=$((previous_rev+1))
           fi
+          echo "Previous Version: ${previous_date}.${previous_rev}"
+          echo "Current Version: ${current_date}.${current_rev}"
           echo "image_version=${current_date}.${current_rev}" >> $GITHUB_ENV
         shell: bash
       - name: Import component versions
