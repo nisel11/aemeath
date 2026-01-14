@@ -9,11 +9,12 @@ build-depends:
     location: /boot
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/zstd.bst
+- freedesktop-sdk.bst:components/xz.bst
 
 environment:
-  ZSTDFLAGS: '--rm -19'
+  XZFLAGS: '-T%{max-jobs}'
 environment-nocache:
-- ZSTDFLAGS
+- XZFLAGS
 
 config:
   commands:
@@ -22,7 +23,7 @@ config:
     for format in erofs verity; do
       image_name="$(readlink "/usr-image/usr.${format}")"
       cp "/usr-image/${image_name}" "%{install-root}/${image_name}"
-      zstd ${ZSTDFLAGS} "%{install-root}/${image_name}"
+      xz ${XZFLAGS} "%{install-root}/${image_name}"
     done
 
   - |
@@ -32,7 +33,7 @@ config:
     sdk_version="${sdk_version%.erofs}"
     sdk_version="${sdk_version%_*}"
     cp "/boot/boot/EFI/Linux/aemeath_${sdk_version}.efi" '%{install-root}/'
-    zstd ${ZSTDFLAGS} "%{install-root}/aemeath_${sdk_version}.efi"
+    xz ${XZFLAGS} "%{install-root}/aemeath_${sdk_version}.efi"
   - |
     cd '%{install-root}/'
-    sha256sum *.zst > SHA256SUMS
+    sha256sum *.xz > SHA256SUMS
