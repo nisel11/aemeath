@@ -11,6 +11,7 @@ build-depends:
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/deps/libusbmuxd.bst
+- components/deps/libtatsu.bst
 - freedesktop-sdk.bst:components/gnutls.bst
 - freedesktop-sdk.bst:components/libgcrypt.bst
 

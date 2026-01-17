@@ -11,4 +11,4 @@ build-depends:
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - components/deps/libplist.bst
-- components/deps/libimobiledevice.bst
+- components/deps/libimobiledevice-glue.bst
