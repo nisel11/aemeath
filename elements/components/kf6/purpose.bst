@@ -18,8 +18,7 @@ depends:
 - components/kf6/kirigami.bst
 - components/kf6/knotifications.bst
 - components/kf6/kservice.bst
-#- components/kde/kaccounts-integration.bst
-#- components/deps/libaccounts-qt.bst
+- components/gear/kaccounts-integration.bst
 
 variables:
   cmake-local: |
