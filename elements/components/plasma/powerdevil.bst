@@ -6,9 +6,6 @@ build-depends:
 - components/kf6/kdoctools.bst
 - components/deps/plasma-wayland-protocols.bst
 
-#runtime-depends:
-#- components/deps/power-profiles-daemon.bst
-
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/xorg-lib-xcb.bst
@@ -35,6 +32,7 @@ depends:
 - components/plasma/plasma-activities.bst
 - components/plasma/plasma-workspace.bst
 - components/deps/qt6-qcoro.bst
+- components/deps/power-profiles-daemon.bst
 
 variables:
   cmake-local: |

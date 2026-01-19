@@ -1,9 +1,10 @@
 kind: cmake
 
 sources:
-- kind: tar
-  url: https://libzip.org/download/libzip-1.11.4.tar.xz
-  ref: 8a247f57d1e3e6f6d11413b12a6f28a9d388de110adc0ec608d893180ed7097b
+- kind: git_repo
+  url: github:nih-at/libzip.git
+  track: "v*"
+  ref: v1.11.4-0-g6f8a0cdd24a0dc6cce9dac4a7679da784ab124ea
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst

@@ -1,3 +1,6 @@
-# Empty, used by CI
 artifacts:
-- url: https://aemeath-cache.nanao.moe
+- url: https://aemeath-cache.castorice.my.id
+  push: true
+  auth:
+    client-key: aemeath.key
+    client-cert: aemeath.crt

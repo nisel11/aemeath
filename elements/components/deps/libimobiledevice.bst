@@ -1,12 +1,14 @@
 kind: autotools
 
 sources:
-- kind: tar
-  url: github:libimobiledevice/libimobiledevice/releases/download/1.4.0/libimobiledevice-1.4.0.tar.bz2
-  ref: 23cc0077e221c7d991bd0eb02150a0d49199bcca1ddf059edccee9ffd914939d
+- kind: git_repo
+  url: github:libimobiledevice/libimobiledevice.git
+  track: "*.*"
+  ref: 1.4.0-0-g149f7623c672c1fa73122c7119a12bfc0012f2ac
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
+- freedesktop-sdk.bst:components/git-minimal.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

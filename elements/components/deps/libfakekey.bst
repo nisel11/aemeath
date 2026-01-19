@@ -4,8 +4,8 @@ sources:
 - kind: git_repo
   url: https://git.yoctoproject.org/libfakekey.git
   track: 0.*
-
   ref: 0.3-0-g7ad885912efb2131e80914e964d5e635b0d07b40
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 
