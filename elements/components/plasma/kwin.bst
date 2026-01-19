@@ -64,6 +64,7 @@ depends:
 - components/plasma/libplasma.bst
 - components/deps/libcanberra.bst
 - components/deps/libdisplay-info.bst
+- components/deps/libqaccessibilityclient.bst
 
 variables:
   cmake-local: |
