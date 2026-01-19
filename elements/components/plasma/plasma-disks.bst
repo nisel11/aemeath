@@ -20,6 +20,7 @@ depends:
 - components/kf6/kservice.bst
 - components/kf6/solid.bst
 - components/plasma/kinfocenter.bst
+- components/deps/smartmontools.bst
 
 variables:
   cmake-local: |
