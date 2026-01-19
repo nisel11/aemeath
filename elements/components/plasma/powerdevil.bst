@@ -33,6 +33,7 @@ depends:
 - components/plasma/plasma-workspace.bst
 - components/deps/qt6-qcoro.bst
 - components/deps/power-profiles-daemon.bst
+- components/deps/ddcutil.bst
 
 variables:
   cmake-local: |
