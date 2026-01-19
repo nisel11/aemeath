@@ -9,6 +9,7 @@ depends:
 - components/qt6/qtbase.bst
 - components/kf6/karchive.bst
 - freedesktop-sdk.bst:components/libheif.bst
+- components/deps/libraw.bst
 
 variables:
   cmake-local: |
