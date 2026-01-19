@@ -10,8 +10,8 @@ config:
   build-commands:
     - |
       for i in *.in; do
-        m4 -D__SDK_VERSION__="%{sdk-version}" \
-        -D__AEMEATH_VERSION__="%{aemeath-version}-%{image-version}" \
+        m4 \
+        -D__AEMEATH_VERSION__="%{image-version}" \
         "${i}" >"$(basename "${i}" .in)"
       done
 
