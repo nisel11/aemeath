@@ -65,7 +65,7 @@ depends:
 - components/plasma/plasma-activities.bst
 - components/deps/libcanberra.bst
 - components/deps/libdisplay-info.bst
-- components/deps/libqaccessibilityclient.bst
+- components/deps/qt6-libqaccessibilityclient.bst
 
 runtime-depends:
 - freedesktop-sdk.bst:components/hwdata.bst

@@ -37,7 +37,7 @@ depends:
 - components/kf6/solid.bst
 - components/deps/kirigami-addons.bst
 - components/deps/libfakekey.bst
-- components/deps/pulseaudio-qt.bst
+- components/deps/qt6-pulseaudio-qt.bst
 
 variables:
   cmake-local: -DBUILD_TESTING=OFF

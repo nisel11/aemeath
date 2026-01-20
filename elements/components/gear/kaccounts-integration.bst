@@ -14,10 +14,10 @@ depends:
 - components/kf6/ki18n.bst
 - components/kf6/kio.bst
 - components/kf6/kwallet.bst
-- components/deps/qt6-qcoro.bst
 - components/deps/libaccounts-qt.bst
-- components/deps/signon-qt6.bst
 - components/deps/intltool.bst
+- components/deps/qt6-qcoro.bst
+- components/deps/qt6-signon.bst
 
 variables:
   cmake-local: -DBUILD_TESTING=OFF
