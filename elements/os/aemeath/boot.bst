@@ -32,8 +32,16 @@ config:
     rm "%{install-root}/boot/EFI/Linux/linux-${version}.efi"
     echo -n "usrhash=$(jq -r '(.[] | select(.type | match("^usr-.*-verity$"))).roothash' /usr-image/compressed.repart.json) " >new-cmdline.txt
     cat cmdline.txt >>new-cmdline.txt
+
+  - |
     ukify build \
       --linux=linux \
       --initrd=initrd \
       --cmdline=@new-cmdline.txt \
       --output="%{install-root}/boot/EFI/Linux/aemeath_%{image-version}.efi"
+
+  - mkdir -p "%{install-root}/boot/EFI/Linux/aemeath_%{image-version}.efi.extra.d"
+  - |
+    ukify build \
+      --cmdline="root=tmpfs aemeath.live rd.systemd.mask=systemd-repart.service systemd.mask=systemd-repart.service" \
+      --output="%{install-root}/boot/EFI/Linux/aemeath_%{image-version}.efi.extra.d/live.addon.efi"

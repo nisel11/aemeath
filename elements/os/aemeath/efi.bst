@@ -8,8 +8,6 @@ build-depends:
 variables:
   uuidnamespace: df2427db-01ec-4c99-96b1-be3edb3cd9f6
 
-  efi-arch: "x64"
-
 environment:
   LD_PRELOAD: /usr/libexec/fakecap/fakecap.so
   FAKECAP_DB: /fakecap
@@ -47,7 +45,8 @@ config:
            --add systemd-repart \
            --add systemd-veritysetup \
            --add crypt \
-           --add tpm2-tss
+           --add tpm2-tss \
+           --add cdrom
 
   - mkdir -p '%{install-root}/boot/loader/keys/auto'
 

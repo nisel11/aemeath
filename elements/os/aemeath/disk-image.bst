@@ -74,5 +74,8 @@ config:
     EOF
 
   - |
+    rm /sysroot/boot/EFI/Linux/aemeath_*.efi.extra.d/live.addon.efi
+
+  - |
     genimage --config "%{build-root}/genimage.cfg" --rootpath /sysroot
     zstd ${ZSTDFLAGS} "%{install-root}/aemeath_%{image-version}.img"
