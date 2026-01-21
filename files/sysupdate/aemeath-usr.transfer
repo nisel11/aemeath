@@ -11,7 +11,7 @@ MatchPattern=usr_@v_@u.erofs.xz
 [Target]
 Type=partition
 Path=auto
-MatchPattern=fdsdk_usr_@v
+MatchPattern=aemeath_usr_@v
 MatchPartitionType=usr
 ReadOnly=true
 PartitionFlags=0

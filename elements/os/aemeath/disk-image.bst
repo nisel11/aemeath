@@ -54,13 +54,13 @@ config:
             partition-type-uuid = "U"
             partition-uuid = "${efi_part_uuid}"
         }
-        partition fdsdk_usr_%{image-version} {
+        partition aemeath_usr_%{image-version} {
             partition-type-uuid = "%{usr-uuid}"
             partition-uuid = "${usr_part_uuid}"
             image = "/usr-image/compressed.usr.raw"
             size = 4G
         }
-        partition fdsdk_usr_verity_%{image-version} {
+        partition aemeath_usr_verity_%{image-version} {
             partition-type-uuid = "%{usr-verity-uuid}"
             partition-uuid = "${usr_verity_part_uuid}"
             image = "/usr-image/compressed.usr-verity.raw"

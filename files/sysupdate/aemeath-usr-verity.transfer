@@ -11,7 +11,7 @@ MatchPattern=usr_@v_@u.verity.xz
 [Target]
 Type=partition
 Path=auto
-MatchPattern=fdsdk_usr_verity_@v
+MatchPattern=aemeath_usr_verity_@v
 MatchPartitionType=usr-verity
 ReadOnly=true
 PartitionFlags=0
