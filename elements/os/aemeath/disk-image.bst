@@ -40,7 +40,7 @@ config:
             extraargs = "--invariant -F32 -i${id_efi} -n EFI"
         }
         mountpoint = "/boot"
-        size = 512M
+        size = 1G
         temporary = true
     }
     image aemeath_%{image-version}.img {
