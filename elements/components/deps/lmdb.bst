@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: openldap:openldap/openldap.git
   track: LMDB_*
-  ref: LMDB_0.9.33-0-g3a29a24777c82a0165de813ae696a5068b5add30
+  ref: LMDB_0.9.34-0-g03d56d5380a998023fb9962627b457504181f49b
