@@ -1,14 +1,13 @@
 kind: script
 
 build-depends:
+- freedesktop-sdk.bst:vm/prepare-image.bst
 - os/aemeath/efi/deps.bst
 - os/aemeath/efi/initial-scripts.bst
-- freedesktop-sdk.bst:vm/prepare-image.bst
 
 variables:
   uuidnamespace: df2427db-01ec-4c99-96b1-be3edb3cd9f6
-
-  efi-arch: "x64"
+  efi-arch: x64
 
 environment:
   LD_PRELOAD: /usr/libexec/fakecap/fakecap.so
@@ -20,7 +19,6 @@ config:
   - mkdir -p /tmp
   - mkdir -p /var/tmp
   - mkdir -p /boot
-
   - |
     prepare-image.sh --sysroot / --rootpasswd root \
                      --seed "%{uuidnamespace}" >/tmp/vars
@@ -38,8 +36,6 @@ config:
            --no-machineid --kernel-image /boot/vmlinuz \
            --kver $(ls -1 /lib/modules | head -n1) \
            --kernel-cmdline "rw quiet splash mount.usrflags=ro lockdown=confidentiality systemd.firstboot=no" \
-           --install 'fsck.btrfs' \
-           --install 'mkfs.btrfs' \
            --add-drivers erofs \
            --add-drivers btrfs \
            --add-drivers amdgpu \
