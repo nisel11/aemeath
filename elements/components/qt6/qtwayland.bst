@@ -14,4 +14,4 @@ depends:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qtwayland-everywhere-src-%{qt6-version}.tar.xz'
-  ref: 49bf6db800227a6b2c971f4c5d03dd1e81297e7ffb296ce4a96437304f27cb13
+  ref: 391998eb432719df26a6a67d8efdc67f8bf2afdd76c1ee3381ebff4fe7527ee2

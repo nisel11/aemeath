@@ -13,4 +13,4 @@ depends:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qtquick3dphysics-everywhere-src-%{qt6-version}.tar.xz'
-  ref: d973847df1be6ee711e771df923537fb62fcac5bf57100f2ebc6f7742c8d2fee
+  ref: b7aff67bd05794351d7c19b178c54b674afc3ea2b4632df892aaee98f12c1cdb

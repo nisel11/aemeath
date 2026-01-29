@@ -16,4 +16,4 @@ depends:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qtmultimedia-everywhere-src-%{qt6-version}.tar.xz'
-  ref: f7a4f9bc2840d4f0f9f7329f0dcb3d3500c54177b8e368091a3727c7320e67b8
+  ref: 93f7ef0106fbd731165a2723f3e436c911fc5e6880f5bc987b55516c20833e2b

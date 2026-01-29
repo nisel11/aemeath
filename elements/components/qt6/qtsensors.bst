@@ -12,4 +12,4 @@ depends:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qtsensors-everywhere-src-%{qt6-version}.tar.xz'
-  ref: 49ce9ce033234689706dfcacef4eac7e562cff127cacc889ffcb3b68d684b395
+  ref: 91e6515b7cebbfae3696861933f5359cc303dfe82f7849cf5a10df378c8ef581

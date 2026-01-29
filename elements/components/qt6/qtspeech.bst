@@ -13,4 +13,4 @@ depends:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qtspeech-everywhere-src-%{qt6-version}.tar.xz'
-  ref: 42caec540f6e10de8628819d10477ed2dc202134753ea68dfc1aa536108b7f4f
+  ref: d937f6c715792b0d8f036e94513ebfc8def6b988a65f3ff30a7f4a8cc1263014

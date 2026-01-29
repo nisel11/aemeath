@@ -12,4 +12,4 @@ depends:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qthttpserver-everywhere-src-%{qt6-version}.tar.xz'
-  ref: a26c8d96d34bb4d4e2455e2c5df6e684aafb530927763eab84794ef71944e93b
+  ref: 26568d59bee258fd35297823d2f7839ef1337042a009b752769e688703fe4643

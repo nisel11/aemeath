@@ -12,4 +12,4 @@ depends:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qtconnectivity-everywhere-src-%{qt6-version}.tar.xz'
-  ref: 7baefd3a90c73820e33ddc59ded8c018e233d14d23eaa4eadbf332b5ac2154ff
+  ref: cf58f021f32857b5b6799cd4404ef613399ecc1c515492f0f620ce338a311a32

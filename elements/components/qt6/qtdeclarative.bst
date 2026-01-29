@@ -22,7 +22,7 @@ config:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qtdeclarative-everywhere-src-%{qt6-version}.tar.xz'
-  ref: 4fb4efb894e0b96288543505d69794d684bcfbe4940ce181d3e6817bda54843e
+  ref: a249914ff66cdcdbf0df8b5ffad997a2ee6dce01cc17d43c6cc56fdc1d0f4b0f
 
 public:
   bst:

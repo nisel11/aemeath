@@ -10,4 +10,4 @@ depends:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qtlanguageserver-everywhere-src-%{qt6-version}.tar.xz'
-  ref: 3360526b4f4d556673b31e29a49e15d02da52d5eaa53b0204d56a0ba160a556c
+  ref: 9a043f2c84b0b470065fc7a954dc4ff0388db3e1b2c457c3d69670baecc40d53

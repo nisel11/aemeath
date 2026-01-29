@@ -11,4 +11,4 @@ depends:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qtserialport-everywhere-src-%{qt6-version}.tar.xz'
-  ref: 17b2f68435f67785a0c75fd70125f3e1892282efdab2098dcdac02d1d70f4c4c
+  ref: b40cbf29da111ffa8fee7e7cb44b9097042782cd17a10448a83ff3156cdebd6b

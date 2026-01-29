@@ -13,4 +13,4 @@ depends:
 sources:
 - kind: tar
   url: 'qt:%{qt6-version-branch}/%{qt6-version}/submodules/qtgrpc-everywhere-src-%{qt6-version}.tar.xz'
-  ref: 98138fb8633c4922ef7ef49b8301f7cbfb7beb7897d44d72e639120a29f4577f
+  ref: 7386bfc9c10c7920e5ff22dcf067e95f379bb379e4d916269f4465ab295ed136
