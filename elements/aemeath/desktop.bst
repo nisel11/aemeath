@@ -7,6 +7,7 @@ depends:
 # System services
 - freedesktop-sdk.bst:components/plymouth.bst
 - freedesktop-sdk.bst:components/networkmanager.bst
+- freedesktop-sdk.bst:components/wpa-supplicant.bst
 - freedesktop-sdk.bst:components/pipewire-daemon.bst
 - freedesktop-sdk.bst:components/wireplumber.bst
 - freedesktop-sdk.bst:components/flatpak.bst
