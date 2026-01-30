@@ -42,6 +42,9 @@ config:
            --install 'mkfs.btrfs' \
            --add-drivers erofs \
            --add-drivers btrfs \
+           --add-drivers amdgpu \
+           --add-drivers virtio-gpu \
+           --add-drivers i915 \
            --libdirs %{libdir} \
            --libdirs %{indep-libdir} \
            --add systemd-repart \
