@@ -29,21 +29,9 @@ depends:
 # Other utilities
 - freedesktop-sdk.bst:components/git.bst
 - freedesktop-sdk.bst:components/findutils.bst
-# Plasma
+# Plasma and Gear
 - components/plasma.bst
-# Built-in apps
-- components/gear/konsole.bst
-- components/gear/kwrite.bst
-- components/gear/dolphin.bst
-- components/gear/ark.bst
-- components/gear/partitionmanager.bst
-- components/gear/audiocd-kio.bst
-- components/gear/filelight.bst
-- components/gear/kcharselect.bst
-- components/gear/kdeconnect-kde.bst
-- components/gear/kfind.bst
-#- components/gear/khelpcenter.bst # wait for Qt6WebEngine
-- components/gear/kio-admin.bst
+- components/gear.bst
 # Configurations
 - freedesktop-sdk.bst:components/steam-devices.bst
 - freedesktop-sdk.bst:vm/base-filesystem.bst
