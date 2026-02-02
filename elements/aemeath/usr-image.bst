@@ -5,10 +5,10 @@ build-depends:
 - freedesktop-sdk.bst:components/erofs-utils.bst
 - freedesktop-sdk.bst:vm/deploy-tools.bst
 - freedesktop-sdk.bst:vm/prepare-image.bst
-- os/aemeath/initial-scripts.bst
-- os/aemeath/repart-config.bst
-- os/aemeath/repart-config-compress.bst
-- filename: os/aemeath/filesystem.bst
+- aemeath/initial-scripts.bst
+- aemeath/repart-config.bst
+- aemeath/repart-config-compress.bst
+- filename: aemeath/filesystem.bst
   config:
     location: '/sysroot'
 

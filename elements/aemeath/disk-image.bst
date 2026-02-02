@@ -5,10 +5,10 @@ build-depends:
 - freedesktop-sdk.bst:components/zstd.bst
 - freedesktop-sdk.bst:components/jq.bst
 - freedesktop-sdk.bst:vm/deploy-tools.bst
-- filename: os/aemeath/usr-image.bst
+- filename: aemeath/usr-image.bst
   config:
     location: '/usr-image'
-- filename: os/aemeath/boot.bst
+- filename: aemeath/boot.bst
   config:
     location: '/sysroot'
 

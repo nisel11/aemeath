@@ -1,7 +1,7 @@
 kind: compose
 
 build-depends:
-- os/aemeath/deps.bst
+- aemeath/deps.bst
 
 config:
   exclude:

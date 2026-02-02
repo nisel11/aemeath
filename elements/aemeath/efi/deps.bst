@@ -22,4 +22,4 @@ depends:
 - freedesktop-sdk.bst:components/btrfs-progs.bst
 - freedesktop-sdk.bst:components/erofs-utils.bst
 - components/aemeath/os-release.bst
-- os/aemeath/repart-config.bst
+- aemeath/repart-config.bst
