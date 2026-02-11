@@ -1,15 +1,12 @@
 kind: script
 
 build-depends:
+- freedesktop-sdk.bst:vm/prepare-image.bst
 - os/aemeath/initramfs/deps.bst
 - os/aemeath/initramfs/initial-scripts.bst
-# Linux kernel
-- freedesktop-sdk.bst:components/linux.bst
-- freedesktop-sdk.bst:vm/prepare-image.bst
 
 variables:
   uuidnamespace: df2427db-01ec-4c99-96b1-be3edb3cd9f6
-
   efi-arch: "x64"
 
 environment:
