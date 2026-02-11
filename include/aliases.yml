@@ -16,6 +16,7 @@ aliases:
   dest-unreach: http://www.dest-unreach.org/
   sourceforge: https://sourceforge.net/projects/
   rustlang: https://static.rust-lang.org/
+  lovelyhq: https://dev.lovelyhq.com/
   qt: https://download.qt.io/official_releases/qt/
   kde: https://invent.kde.org/
   kde_stable: https://download.kde.org/stable/

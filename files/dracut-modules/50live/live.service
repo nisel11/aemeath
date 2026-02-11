@@ -1,0 +1,14 @@
+[Unit]
+Description=Setup Aemeath Images for LiveCD
+DefaultDependencies=no
+ConditionKernelCommandLine=aemeath.live
+After=systemd-udev-settle.service
+Before=initrd-root-fs.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/aemeath-live-setup
+
+[Install]
+WantedBy=initrd.target

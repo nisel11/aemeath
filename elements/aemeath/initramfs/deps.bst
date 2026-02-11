@@ -22,4 +22,5 @@ depends:
 - freedesktop-sdk.bst:components/btrfs-progs.bst
 - freedesktop-sdk.bst:components/erofs-utils.bst
 - components/aemeath/os-release.bst
+- aemeath/initramfs/dracut-modules.bst
 - aemeath/repart-config.bst

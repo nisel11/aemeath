@@ -47,7 +47,8 @@ config:
            --add systemd-repart \
            --add systemd-veritysetup \
            --add crypt \
-           --add tpm2-tss
+           --add tpm2-tss \
+           --add live
 
   - mkdir -p "%{install-root}/boot"
   - cp /boot/vmlinuz "%{install-root}/boot/"
