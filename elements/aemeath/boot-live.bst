@@ -6,6 +6,9 @@ build-depends:
 - freedesktop-sdk.bst:components/systemd-ukify.bst
 - freedesktop-sdk.bst:components/util-linux.bst
 - components/aemeath/os-release.bst
+- filename: aemeath/live/sysext.bst
+  config:
+    location: '/sysext'
 
 variables:
   strip-binaries: ''
@@ -20,3 +23,7 @@ config:
     ukify build \
       --cmdline="root=tmpfs aemeath.live rd.systemd.mask=systemd-repart.service systemd.mask=systemd-repart.service" \
       --output="%{install-root}/boot/EFI/Linux/aemeath_%{image-version}.efi.extra.d/live.addon.efi"
+  
+  # Copy sysext to boot directory
+  - mkdir -p "%{install-root}/boot/sysext"
+  - cp /sysext/calamares.raw "%{install-root}/boot/sysext/"
