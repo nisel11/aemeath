@@ -9,8 +9,8 @@ build-depends:
 - freedesktop-sdk.bst:components/util-linux.bst
 - freedesktop-sdk.bst:components/jq.bst
 - components/aemeath/os-release.bst
-- os/aemeath/initramfs.bst
-- filename: os/aemeath/usr-image.bst
+- aemeath/initramfs.bst
+- filename: aemeath/usr-image.bst
   config:
     location: /usr-image
 

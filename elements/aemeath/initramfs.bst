@@ -2,8 +2,8 @@ kind: script
 
 build-depends:
 - freedesktop-sdk.bst:vm/prepare-image.bst
-- os/aemeath/initramfs/deps.bst
-- os/aemeath/initramfs/initial-scripts.bst
+- aemeath/initramfs/deps.bst
+- aemeath/initramfs/initial-scripts.bst
 
 variables:
   uuidnamespace: df2427db-01ec-4c99-96b1-be3edb3cd9f6

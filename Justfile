@@ -16,13 +16,13 @@ build:
     bst build aemeath/desktop.bst
 
 export: clean-target build
-    bst build os/aemeath/export.bst
-    bst artifact checkout os/aemeath/export.bst --directory target
+    bst build aemeath/export.bst
+    bst artifact checkout aemeath/export.bst --directory target
 
 disk-image: clean-disks build
-    bst build os/aemeath/disk-image.bst
-    bst artifact checkout os/aemeath/disk-image.bst --directory disks
+    bst build aemeath/disk-image.bst
+    bst artifact checkout aemeath/disk-image.bst --directory disks
 
 live-image: clean-live build
-    bst build os/aemeath/live-image.bst
-    bst artifact checkout os/aemeath/live-image.bst --directory live
+    bst build aemeath/live-image.bst
+    bst artifact checkout aemeath/live-image.bst --directory live
